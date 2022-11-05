@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <style>
+            .register .nav-tabs .nav-link:hover{
+                border: none;
+            }
+            .text-align{
+                margin-top: -3%;
+                margin-bottom: -9%;
+              
+
+                padding: 10%;
+                margin-left: 3%;
+            }
+            .form-new{
+                margin-right: 2%;
+              
+                margin-left: 2%;
+            }
+            .register-heading{
+                margin-left: 2%;
+                margin-bottom: 10%;
+                color: #e9ecef;
+            }
+            .register-heading h1{
+                margin-left: 2%;
+                margin-bottom: 10%;
+                
+                color: #e9ecef;
+            }
+            .register{
+                background: -webkit-linear-gradient(left, #055a4f, #00c6ff);
+                margin-top: 3%;
+                padding: 3%;
+                border-radius: 2.5rem;
+            }
+            
+            
+             .register{
+                background: -webkit-linear-gradient(left, #055a4f, #00c6ff);
+                margin-top: 3%;
+                padding: 3%;
+                
+                border-radius: 2.5rem;
+            }
+            .btnSubmit
+            {
+                width: 100%;
+                border-radius: 1rem;
+                padding: 1.5%;
+                color: #fff;
+                background-color: #03612e;
+                border: none;
+               
+               
+                cursor: pointer;
+                margin-right: 6%;
+                color: rgb(246, 246, 252);
+                margin-top: 4%;
+            }
+            
+            .btn-group button {
+  background-color: #04AA6D; /* Green background */
+  border: 1px solid green; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #3e8e41;
+}
+            
+            
+            
+            
+    </style>
+
+</head>
+<body>
+    
+<div class="container register">
+<p id="p1"> dd/mm/yyyy</p>  below you will add the control of date whic is selected  <br>
+
+
+<body>
+
+<h1>Button Group</h1>
+
+<div class="btn-group">
+
+    <button
+   onclick="myinfor()">English
+  </button> 
+  
+   
+   
+   <button
+   onclick="myinfor()">French
+  </button> 
+  
+  
+
+  <button
+   onclick="myinfor()">T_smart Solution
+  </button> 
+  
+</div>
+
+</body>
+
+
+
+ <br> 
+
+<input type="date" id="dt" onchange="mydate1();" hidden/>
+<input type="text" id="ndt"  onclick="mydate1();" hidden />
+<input type="button" Value="press and select last" onclick="mydate();" />  <br> <br>
+
+
+<input type="button" Value="N.B Info" onclick="myinfor();" /> 
+
+
+            <div class="row">
+                <div class="col-md-12">
+                        <div class="tab-pane fade show active text-align form-new" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <h3 class="register-heading"> Cookies testing!
+                            <div class="row register-form">
+                                <div class="col-md-12">
+                                    <form method="post" autocomplete="off" name="google-sheet">
+                                        <div class="form-group">
+                                            <input type="text" name="Name" class="form-control" placeholder="Your Name *" value="" required=""/>  
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" name="Email" class="form-control" placeholder="Your Email *" value="" required=""/>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="number" name="Phone" class="form-control" placeholder="Phone Number" value="" required=""/>
+                             
+                                        </div>
+                                        
+      <p id="p1"> dd/mm  below you  
+                                        
+                                     
+                                         <div class="form-group">
+                                            <input type="number" name="Phone" class="form-control" placeholder="issue Type *" value="" required=""/>
+                                          
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="submit" name="submit" class="btnSubmit btn-block" value="subit now">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+          
+          <script>
+            const scriptURL = //'https://script.google.com/macros/s/AKfycbxkgWotCMyvIKoT9aGtPCndZdHtHrq8i972t9CKAVjO6xC7T0I/exec'
+            const form = document.forms['google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+</html>
+          
+          <!DOCTYPE html>
+<html>
+<head>
+<script>
+function setCookie(cname,cvalue,exdays) {
+  
+  
+  var today = new Date(); 
+  var tomorrow = new Date();
+  tomorrow.setDate(today. getDate()+7);
+ 
+  let expires = "expires=" + tomorrow.toUTCString(); 
+  
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  
+  
+   var t2 = tomorrow.getTime();
+        var t1 = today.getTime();
+ 
+    
+        
+        var diffD = Math.floor((t2-t1) / (1000 * 60 * 60 * 24));
+        
+  
+  alert("We expire it on " + diffD);
+  
+  
+    
+}
+
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+function checkCookie() {
+  let user = getCookie("username");
+  if (user != "") {
+    alert("Welcome again " + user);
+    //setCookie("username", "", 30);
+  } else {
+     user = prompt("Please enter your name Izina ryanyu:"+new Date(),"");
+     
+    
+     if (user != "" && user != null) {
+       setCookie("username", user, 30);
+     }
+  }
+}
+
+
+function mydate() {
+  //alert("");
+  document.getElementById("dt").hidden = false;
+  document.getElementById("ndt").hidden = true;
+  
+  document.getElementById("p1").innerHTML = "mm/dd/yyyy";
+ 
+  
+ 
+}
+
+function mydate1() {
+  d = new Date(document.getElementById("dt").value);
+  dt = d.getDate();
+  mn = d.getMonth();
+  mn++;
+  yy = d.getFullYear();
+  document.getElementById("ndt").value = dt + "/" + mn + "/" + yy
+  document.getElementById("ndt").hidden = false;
+  document.getElementById("dt").hidden = true;
+  
+  
+   var t2 = new Date(); 
+        var t1 = d.getTime();
+ 
+    
+        
+        var diffD = Math.floor((t2-t1) / (1000 * 60 * 60 * 24));
+        document.getElementById("p1").innerHTML = "dd/mm/yyyy";
+        
+  
+  alert("We expire it on " + diffD);
+  
+  
+}
+
+function myinfor() {
+alert(" Women with irregular cycles, which could include those who: \n just began menstruationjust discontinued use of a hormonal contraceptive method \n just gave birth \n are approaching menopause \n have Polycystic Ovary Syndrome \n Women with multiple sexual partners \n Women and their partners who do not want to avoid sex on fertile days \n Women who cannot track their fertility daily and keep careful records \n Women with STIs or abnormal discharge Abagore bafite inzinguzingo zidasanzwe, zishobora kubamo abo: \n batangiye imihango gusa bareke gukoresha uburyo bwo kuboneza urubyaro bwa hormone \n gusa babyaye \n begereje gucura \n bafite Syndrome ya Polycystic Ovary \n Abagore bafite abahuje ibitsina benshi \n Abagore na abafatanyabikorwa babo badashaka kwirinda imibonano mpuzabitsina muminsi yuburumbuke \n Abagore badashobora gukurikirana uburumbuke bwabo burimunsi kandi bagakomeza kwandika neza \n Abagore bafite indwara zandurira mu mibonano mpuzabitsina cyangwa gusohora bidasanzwe ");
+
+}
+
+
+</script>
+
+<p>The paragraph above was changed by a script.</p>
+</head>
+
+<body onload="checkCookie()"></body>
+
+</html>
