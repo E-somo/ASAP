@@ -211,7 +211,12 @@ s0.parentNode.insertBefore(s1,s0);
 <head>
 <script>
     document.addEventListener("visibilitychange",function(){
-    document.title=document.visibilityState;
+    document.title=document.visibilityState; 
+        
+        
+      if ( document.hidden ==false){
+      alert("alert ok visible");
+      }
     });
     
     
