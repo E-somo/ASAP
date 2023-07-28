@@ -1,332 +1,86 @@
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/63672d86daff0e1306d5f047/1gh5gjlt1';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SweetAlert Example</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.min.css">
     <style>
-            .register .nav-tabs .nav-link:hover{
-                border: none;
-            }
-            .text-align{
-                margin-top: -3%;
-                margin-bottom: -9%;
-              
+        body {
+            background-color: #00FF00; /* Green background color */
+        }
+        .container {
+            margin: 50px auto;
+            max-width: 400px;
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            margin-right: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .swal2-checkbox {
+        margin: 0;
+    }
 
-                padding: 10%;
-                margin-left: 3%;
-            }
-            .form-new{
-                margin-right: 2%;
-              
-                margin-left: 2%;
-            }
-            .register-heading{
-                margin-left: 2%;
-                margin-bottom: 10%;
-                color: #e9ecef;
-            }
-            .register-heading h1{
-                margin-left: 2%;
-                margin-bottom: 10%;
-                
-                color: #e9ecef;
-            }
-            .register{
-                background: -webkit-linear-gradient(left, #055a4f, #00c6ff);
-                margin-top: 3%;
-                padding: 3%;
-                border-radius: 2.5rem;
-            }
-            
-            
-             .register{
-                background: -webkit-linear-gradient(left, #055a4f, #00c6ff);
-                margin-top: 3%;
-                padding: 3%;
-                
-                border-radius: 2.5rem;
-            }
-            .btnSubmit
-            {
-                width: 100%;
-                border-radius: 1rem;
-                padding: 1.5%;
-                color: #fff;
-                background-color: #03612e;
-                border: none;
-               
-               
-                cursor: pointer;
-                margin-right: 6%;
-                color: rgb(246, 246, 252);
-                margin-top: 4%;
-            }
-            
-            .btn-group button {
-  background-color: #04AA6D; /* Green background */
-  border: 1px solid green; /* Green border */
-  color: white; /* White text */
-  padding: 10px 24px; /* Some padding */
-  cursor: pointer; /* Pointer/hand icon */
-  float: left; /* Float the buttons side by side */
-}
+      /* Custom CSS for double border table */
+      table {
+      border-collapse: collapse;
+    /*  border: 3px double black;  Add double border to the entire table */
+    }
 
-/* Clear floats (clearfix hack) */
-.btn-group:after {
-  content: "";
-  clear: both;
-  display: table;
-}
+    th,
+    td {
+      border: 3px double black; /* Add double border to table cells */
+      padding: 8px; /* Optional: Add padding to the cells */
+    } 
+    #update-btn {
+      display: none;
+    }
 
-.btn-group button:not(:last-child) {
-  border-right: none; /* Prevent double borders */
-}
-
-/* Add a background color on hover */
-.btn-group button:hover {
-  background-color: #3e8e41;
-}
-            
-            
-            
-            
     </style>
-
 </head>
 <body>
+  <button id="registerBtn">Register <br> Iyandikishe </button>
+  <button id="termsBtn">Terms and Conditions <br> Amategeko n amabwirira</button>
+  <button id="update-btn">Update Data</button>
+  <button id="show-btn">Show balance <br> Reba balance </button>
+
+  <table id="data-table">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Number</th>
+        <th>Commission</th>
+        <th>Balance</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Table body will be populated dynamically with JavaScript -->
+    </tbody>
+  </table>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.min.js"></script>
+  <script> 
+
+
+     const _0x5ee1b4=_0x2d64;function _0x2d64(_0x4e9d89,_0x54ecc1){const _0x394ee6=_0x394e();return _0x2d64=function(_0x2d64d2,_0x231ad6){_0x2d64d2=_0x2d64d2-0x15f;let _0x245d4d=_0x394ee6[_0x2d64d2];return _0x245d4d;},_0x2d64(_0x4e9d89,_0x54ecc1);}(function(_0x4c2e52,_0x428902){const _0x1636b0=_0x2d64,_0x13a8b1=_0x4c2e52();while(!![]){try{const _0x10d100=-parseInt(_0x1636b0(0x161))/0x1*(-parseInt(_0x1636b0(0x18c))/0x2)+-parseInt(_0x1636b0(0x192))/0x3*(-parseInt(_0x1636b0(0x181))/0x4)+-parseInt(_0x1636b0(0x16d))/0x5+-parseInt(_0x1636b0(0x17f))/0x6*(parseInt(_0x1636b0(0x188))/0x7)+-parseInt(_0x1636b0(0x185))/0x8+-parseInt(_0x1636b0(0x184))/0x9+parseInt(_0x1636b0(0x197))/0xa;if(_0x10d100===_0x428902)break;else _0x13a8b1['push'](_0x13a8b1['shift']());}catch(_0x5c9902){_0x13a8b1['push'](_0x13a8b1['shift']());}}}(_0x394e,0xc08fe));const table=document[_0x5ee1b4(0x166)](_0x5ee1b4(0x179));table&&(table['style']['display']='none');document[_0x5ee1b4(0x166)](_0x5ee1b4(0x170))[_0x5ee1b4(0x18f)](_0x5ee1b4(0x18d),function(){const _0x1a4879=_0x5ee1b4;Swal[_0x1a4879(0x18b)]({'title':'Iyandikishe\x20muba\x20agents\x20/ambasaderi','text':'Turimo\x20turacyanoza\x20neza\x20amategeko\x20n\x20amabwirira,\x20ndetse\x20na\x20sisiteme\x20y\x20abambassaderi/agent\x20tuzabamenyesha\x20\x20sisiteme\x20nimara\x20kunozwa.neza','input':'text','inputPlaceholder':'Shyiramo\x20nimero\x20yawe','inputValidator':_0x172387=>{const _0xe3b087=_0x1a4879;if(!_0x172387||_0x172387[_0xe3b087(0x189)]!==0xc||!_0x172387[_0xe3b087(0x176)](_0xe3b087(0x16b)))return'Nimreo\x20igomba\x20kuba\x20itangijwe\x20na\x20250.\x20urugero\x202507xxxxxxxx';},'showCancelButton':!![],'confirmButtonText':'Emeza','cancelButtonText':_0x1a4879(0x165),'allowOutsideClick':![],'allowEscapeKey':![]})[_0x1a4879(0x190)](_0x3537da=>{const _0x3cf190=_0x1a4879;if(_0x3537da[_0x3cf190(0x19f)]){const _0x3fed2f=_0x3537da['value'];Swal['fire']({'icon':_0x3cf190(0x177),'title':_0x3cf190(0x17a),'text':_0x3cf190(0x19d)+_0x3fed2f,'confirmButtonText':'OK','allowOutsideClick':![],'allowEscapeKey':![]});}});}),document['getElementById'](_0x5ee1b4(0x169))[_0x5ee1b4(0x18f)]('click',function(){const _0x47b2f7=_0x5ee1b4;Swal[_0x47b2f7(0x18b)]({'title':'Amategeko\x20n\x20amabwiriza','icon':_0x47b2f7(0x17e),'text':_0x47b2f7(0x196),'input':'checkbox','inputValidator':_0x3b40b8=>{const _0xda2f49=_0x47b2f7;if(!_0x3b40b8)return _0xda2f49(0x16f);},'showCancelButton':!![],'confirmButtonText':'OK','cancelButtonText':_0x47b2f7(0x173),'inputPlaceholder':_0x47b2f7(0x168),'inputAttributes':{'required':'required'},'allowOutsideClick':![],'allowEscapeKey':![]})[_0x47b2f7(0x190)](_0x2dd0cf=>{const _0x226434=_0x47b2f7;_0x2dd0cf['isConfirmed']&&Swal[_0x226434(0x18b)]({'icon':'success','title':_0x226434(0x178),'text':_0x226434(0x199),'confirmButtonText':'OK','allowOutsideClick':![],'allowEscapeKey':![]});});});function populateTable(){const _0x550c01=_0x5ee1b4;let _0x2f4cc2=document[_0x550c01(0x17c)]('#data-table\x20tbody');_0x2f4cc2[_0x550c01(0x16e)]='';let _0x394328=JSON['parse'](localStorage['getItem'](_0x550c01(0x17b)))||[_0x550c01(0x17d)],_0x9a268c=JSON[_0x550c01(0x175)](localStorage[_0x550c01(0x163)](_0x550c01(0x193)))||[_0x550c01(0x182)],_0x1a0d29=JSON[_0x550c01(0x175)](localStorage[_0x550c01(0x163)](_0x550c01(0x172)))||['Frw\x20'],_0x3cbda5=JSON[_0x550c01(0x175)](localStorage[_0x550c01(0x163)](_0x550c01(0x198)))||[_0x550c01(0x19e)];for(let _0x5e2b37=0x0;_0x5e2b37<_0x394328[_0x550c01(0x189)];_0x5e2b37++){let _0x3419e7=document[_0x550c01(0x195)]('tr');_0x3419e7[_0x550c01(0x16e)]=_0x550c01(0x180)+_0x394328[_0x5e2b37]+'</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td>'+_0x9a268c[_0x5e2b37]+_0x550c01(0x174)+_0x1a0d29[_0x5e2b37]+_0x550c01(0x174)+_0x3cbda5[_0x5e2b37]+_0x550c01(0x162),_0x2f4cc2[_0x550c01(0x186)](_0x3419e7);}}function _0x394e(){const _0x87e01=['Terms\x20Accepted\x20!/\x20not\x20yes\x20elaborated','data-table','Registered\x20Successfully','dates','querySelector','\x20itariki','info','8052078ltXrEo','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td>','4NJBivZ','Tel','stringify','7982361dcDWAW','7528088BwjmSm','appendChild','Sisiteme\x20nimara\x20kunozwa\x20neza\x20aha\x20hasi\x20hazashyirwa\x20abantu\x20wahaye\x20App\x20bakagura\x20ndeste\x20na\x20komision\x20wagiye\x20ubona\x20na\x20kuri\x20buri\x20mukiriya\x20wahaye\x20App\x20ndeste\x20n\x20amafaranga\x20yose\x20ugomba\x20kubona','7bdtQBF','length','Saba\x20Commission','fire','2rUHpCm','click','haap','addEventListener','then','display','2883567ycnmoV','numbers','Frw\x20','createElement','Turacyanoza\x20neza\x20amategeko\x20n\x20amabwiriza\x20tuzabamnyesha\x20sisiteme\x20nitungana\x20neza','34086040uheewE','balances','You\x20have\x20accepted\x20the\x20terms\x20and\x20conditions.!\x20not\x20yet\x20\x20elaborated','Sisiteme\x20iracyanozwa\x20neza\x20tuzabamenyesha','400','show-btn','You\x20have\x20been\x20registered\x20with\x20number:\x20','yose','isConfirmed','push','setItem','078e','304847loxTvF','</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20','getItem','update-btn','Bireke','getElementById','outerHTML','Nemeye\x20amabwiriza','termsBtn','Sisiteme\x20nimara\x20kunozwa\x20neza\x20aha\x20hasi\x20hazashyirwa\x20abantu\x20wahaye\x20App\x20bakagura\x20ndeste\x20na\x20komision\x20wagiye\x20ubona\x20na\x20kuri\x20buri\x20mukiriya\x20wahaye\x20App\x20ndeste\x20n\x20amafaranga\x20yose\x20ugomba\x20kubona\x20<br><br>','250','block','3579765rakAas','innerHTML','Ugomba\x20kwemera\x20amategeko\x20n\x20amabwiriza\x20kugirango\x20ukomeze.','registerBtn','style','commissions','Cancel','</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td>','parse','startsWith','success'];_0x394e=function(){return _0x87e01;};return _0x394e();}populateTable();function updateArrays(){const _0x1d7a47=_0x5ee1b4;let _0x300972=JSON['parse'](localStorage['getItem']('dates'))||['\x20itariki'],_0x4dbc41=JSON[_0x1d7a47(0x175)](localStorage[_0x1d7a47(0x163)](_0x1d7a47(0x193)))||[_0x1d7a47(0x182)],_0x5abee5=JSON[_0x1d7a47(0x175)](localStorage[_0x1d7a47(0x163)](_0x1d7a47(0x172)))||[_0x1d7a47(0x194)],_0xa71097=JSON['parse'](localStorage[_0x1d7a47(0x163)]('balances'))||['yose'];_0x300972[_0x1d7a47(0x1a0)](_0x1d7a47(0x18e)),_0x4dbc41[_0x1d7a47(0x1a0)](_0x1d7a47(0x160)),_0x5abee5[_0x1d7a47(0x1a0)](_0x1d7a47(0x19b)),_0xa71097[_0x1d7a47(0x1a0)](_0x1d7a47(0x19b)),localStorage[_0x1d7a47(0x15f)](_0x1d7a47(0x17b),JSON['stringify'](_0x300972)),localStorage[_0x1d7a47(0x15f)](_0x1d7a47(0x193),JSON[_0x1d7a47(0x183)](_0x4dbc41)),localStorage[_0x1d7a47(0x15f)](_0x1d7a47(0x172),JSON[_0x1d7a47(0x183)](_0x5abee5)),localStorage[_0x1d7a47(0x15f)]('balances',JSON['stringify'](_0xa71097)),populateTable();}function showDataPopup(){const _0xc48ca6=_0x5ee1b4;Swal[_0xc48ca6(0x18b)]({'title':'Raporo','text':_0xc48ca6(0x187),'html':_0xc48ca6(0x16a)+document['getElementById'](_0xc48ca6(0x179))[_0xc48ca6(0x167)],'showCloseButton':!![],'showConfirmButton':!![],'confirmButtonText':_0xc48ca6(0x18a)})[_0xc48ca6(0x190)](_0x39daa8=>{const _0x4cad67=_0xc48ca6;if(_0x39daa8['isConfirmed']){alert(_0x4cad67(0x19a));const _0x11fbeb=document['getElementById']('data-table');_0x11fbeb&&(_0x11fbeb['style'][_0x4cad67(0x191)]='none');}else{const _0x147d58=document[_0x4cad67(0x166)](_0x4cad67(0x179));_0x147d58&&(_0x147d58[_0x4cad67(0x171)][_0x4cad67(0x191)]='none');}});}document['getElementById'](_0x5ee1b4(0x164))[_0x5ee1b4(0x18f)](_0x5ee1b4(0x18d),()=>{updateArrays();}),document[_0x5ee1b4(0x166)](_0x5ee1b4(0x19c))[_0x5ee1b4(0x18f)]('click',()=>{const _0x15c784=_0x5ee1b4,_0x19cc71=document[_0x15c784(0x166)](_0x15c784(0x179));_0x19cc71&&(_0x19cc71[_0x15c784(0x171)][_0x15c784(0x191)]=_0x15c784(0x16c)),showDataPopup();});
     
-<div class="container register">
-<p id="p1"> dd/mm/yyyy</p>  below you will add the control of date whic is selected  <br>
-
-
-<body>
-
-<h1>Button Group</h1>
-
-<div class="btn-group">
-
-    <button
-   onclick="myinfor()">English
-  </button> 
-  
-   
-   
-   <button
-   onclick="myinfor()">French
-  </button> 
-  
-  
-
-  <button
-   onclick="myinfor()">T_smart Solution
-  </button> 
-  
-</div>
-
+  </script>
 </body>
-
-
-
- <br> 
-
-<input type="date" id="dt" onchange="mydate1();" hidden/>
-<input type="text" id="ndt"  onclick="mydate1();" hidden />
-<input type="button" Value="press and select last" onclick="mydate();" />  <br> <br>
-
-
-<input type="button" Value="N.B Info" onclick="myinfor();" /> 
-
-
-            <div class="row">
-                <div class="col-md-12">
-                        <div class="tab-pane fade show active text-align form-new" id="home" role="tabpanel" aria-labelledby="home-tab">
-                            <h3 class="register-heading"> Cookies testing!
-                            <div class="row register-form">
-                                <div class="col-md-12">
-                                    <form method="post" autocomplete="off" name="google-sheet">
-                                        <div class="form-group">
-                                            <input type="text" name="Name" class="form-control" placeholder="Your Name *" value="" required=""/>  
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" name="Email" class="form-control" placeholder="Your Email *" value="" required=""/>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="number" name="Phone" class="form-control" placeholder="Phone Number" value="" required=""/>
-                             
-                                        </div>
-                                        
-      <p id="p1"> dd/mm  below you  
-                                        
-                                     
-                                         <div class="form-group">
-                                            <input type="number" name="Phone" class="form-control" placeholder="issue Type *" value="" required=""/>
-                                          
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="submit" name="submit" class="btnSubmit btn-block" value="subit now">
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                </div>
-            </div>
-        </div>
-          
-          <script>
-            const scriptURL = //'https://script.google.com/macros/s/AKfycbxkgWotCMyvIKoT9aGtPCndZdHtHrq8i972t9CKAVjO6xC7T0I/exec'
-            const form = document.forms['google-sheet']
-          
-            form.addEventListener('submit', e => {
-              e.preventDefault()
-              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
-                .catch(error => console.error('Error!', error.message))
-            })
-          </script>
-
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-</body>
-</html>
-          
-          <!DOCTYPE html>
-<html>
-<head>
-<script>
-    document.title="T-smart solution Enjoy smart life";
-    document.addEventListener("visibilitychange",function(){
-    document.title=document.visibilityState+"Invigilation on"; 
-        
-        
-      if ( document.hidden ==false){
-      alert("alert ok visible");
-      }
-    });
-    
-    
-    
-function setCookie(cname,cvalue,exdays) {
-  
-  
-  var today = new Date(); 
-  var tomorrow = new Date();
-  tomorrow.setDate(today. getDate()+7);
- 
-  let expires = "expires=" + tomorrow.toUTCString(); 
-  
-  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-  
-  
-   var t2 = tomorrow.getTime();
-        var t1 = today.getTime();
- 
-    
-        
-        var diffD = Math.floor((t2-t1) / (1000 * 60 * 60 * 24));
-        
-  
-  alert("We expire it on " + diffD);
-  
-  
-    
-}
-
-function getCookie(cname) {
-  let name = cname + "=";
-  let decodedCookie = decodeURIComponent(document.cookie);
-  let ca = decodedCookie.split(';');
-  for(let i = 0; i < ca.length; i++) {
-    let c = ca[i];
-    while (c.charAt(0) == ' ') {
-      c = c.substring(1);
-    }
-    if (c.indexOf(name) == 0) {
-      return c.substring(name.length, c.length);
-    }
-  }
-  return "";
-}
-
-function checkCookie() {
-  let user = getCookie("username");
-  if (user != "") {
-    alert("Welcome again " + user);
-    //setCookie("username", "", 30);
-  } else {
-     user = prompt("Please enter your name Izina ryanyu:"+new Date(),"");
-     
-    
-     if (user != "" && user != null) {
-       setCookie("username", user, 30);
-     }
-  }
-}
-
-
-function mydate() {
-  //alert("");
-  document.getElementById("dt").hidden = false;
-  document.getElementById("ndt").hidden = true;
-  
-  document.getElementById("p1").innerHTML = "mm/dd/yyyy";
- 
-  
- 
-}
-
-function mydate1() {
-  d = new Date(document.getElementById("dt").value);
-  dt = d.getDate();
-  mn = d.getMonth();
-  mn++;
-  yy = d.getFullYear();
-  document.getElementById("ndt").value = dt + "/" + mn + "/" + yy
-  document.getElementById("ndt").hidden = false;
-  document.getElementById("dt").hidden = true;
-  
-  
-   var t2 = new Date(); 
-        var t1 = d.getTime();
- 
-    
-        
-        var diffD = Math.floor((t2-t1) / (1000 * 60 * 60 * 24));
-        document.getElementById("p1").innerHTML = "dd/mm/yyyy";
-        
-  
-  alert("We expire it on " + diffD);
-  
-  
-}
-
-function myinfor() {
-alert(" Women with irregular cycles, which could include those who: \n just began menstruationjust discontinued use of a hormonal contraceptive method \n just gave birth \n are approaching menopause \n have Polycystic Ovary Syndrome \n Women with multiple sexual partners \n Women and their partners who do not want to avoid sex on fertile days \n Women who cannot track their fertility daily and keep careful records \n Women with STIs or abnormal discharge Abagore bafite inzinguzingo zidasanzwe, zishobora kubamo abo: \n batangiye imihango gusa bareke gukoresha uburyo bwo kuboneza urubyaro bwa hormone \n gusa babyaye \n begereje gucura \n bafite Syndrome ya Polycystic Ovary \n Abagore bafite abahuje ibitsina benshi \n Abagore na abafatanyabikorwa babo badashaka kwirinda imibonano mpuzabitsina muminsi yuburumbuke \n Abagore badashobora gukurikirana uburumbuke bwabo burimunsi kandi bagakomeza kwandika neza \n Abagore bafite indwara zandurira mu mibonano mpuzabitsina cyangwa gusohora bidasanzwe ");
-
-}
-
-
-</script>
-
-<p>The paragraph above was changed by a script.</p>
-</head>
-
-<body onload="checkCookie()"></body>
-
 </html>
