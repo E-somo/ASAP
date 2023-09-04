@@ -51,7 +51,7 @@
 </head>
 <body>
   <div class="main-container">
-    <h2 style="text-align: center;padding-top: 1%;">Agent Management Portal</h2>
+    <h2 style="text-align: center;padding-top: 1%;">Agent Management Portal 1.0</h2>
     <div class="button-container">
         <button class="styled-button" onclick="addCommission()">Ongera Komisiyo <br><br> Add Commission</button>
         <button class="styled-button" onclick="showTerms()">Amategeko n'amabwiriza <br> <br> Terms and Conditions</button>
@@ -204,10 +204,12 @@ const summed = lastThreeNumber + (currentDay + currentMonth) * 5;
             } else if (1*pin !== (summed*1)) {
                 Swal.showValidationMessage('Pin Yanyu siyo musabwa gukoresha PIN mwahawe muri SMS mukimara kwishyura 250 Frw na nimero yishyuye neza') ;
             } else {
-              NumberPin= number.toString()+" Registered Parter with PIN ";
+              
 
               num1phone = number.toString();
               num2PIN= ""+(sum*123);
+
+              NumberPin= number.toString()+" Registered Parter with PIN "+num2PIN;
 
               //  alert("good add commissioner with  "+(sum*123)+" i will"+NumberPin );
                 
@@ -488,7 +490,7 @@ const summed = lastThreeNumber + (currentDay + currentMonth) * 7;
       preConfirm: () => {
         const acceptCheckbox = document.getElementById("accept-checkbox");
         if (!acceptCheckbox.checked) {
-          Swal.showValidationMessage('Please accept the terms to proceed');
+          Swal.showValidationMessage('Nyamuna Mwemere Amategeko n amabwiriza kugirango mukomeze Please accept the terms to proceed');
         }
       }
     }).then((result) => {
@@ -746,6 +748,9 @@ const summed = lastThreeNumber + (currentDay + currentMonth) * 7;
           }
           var founddsdsd = "RsgJ9jSH78YHdjuJGrn";
 
+          
+
+          
         function findinIt() {
      // document.getElementById('tabled').style.display = 'none';
       const base = 'https://docs.google.com/spreadsheets/d/1FOMkCxky-A'+founddsdsd+'VbSQttY7PZ3nY0/gviz/tq?gid=13616113';
@@ -1901,8 +1906,6 @@ if(retrypolicy==="secundo")  {
          
   
 
-
-    
 
 
       
