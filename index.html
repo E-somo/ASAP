@@ -477,7 +477,7 @@ const summed = lastThreeNumber + (currentDay + currentMonth) * 77;
           Swal.fire({
       title: 'Terms and Conditions',
       
-      html: 'Amategeko n amabwiriza <br><br>  1. Kuba Umu agent (ambasador) wa Tubimenye Smart Solution bisaba ko uba ufite SIM card ikwanditseho ishobora kwakira SMS igihe ari ngombwa. <br> <br>  2. Usabwa kwiyandikisha ukoresheje  Nimero yawe ya telefone  ukanze ahavuga <b> Iyandikishe Hano ! Create account Here ! </b> <br><br> 3. Mukwiyandikisha wishyura amafaranga 250 Frw ukoresheje SIM card yawe  ukayishyura kuri MOMO pay ya Tubimenye Smart Solution Ltd nyuma yo kwishyura uhita uhabwa PIN uzajya wifashisha winjira kuri konte yawe  4. Kongera komisiyo wandika muri sisiteme nimero y umuntu wahaye App yacu akagura sisiteme igahita ikubarira amafaranga 500 frw kugeza kuri 200 Frw bitewe nigihe  umushyiriyemo   <br> <br>  5. Gusaba komisiyo bikorwa  binyumze muri sisiteme gisa kdi komisiyo uyihabwa uwo musi ( mumisi y akazi ) na nyuma y imisi 2 muri weekend. 6.Usabwa kubika neza PIN yawe kuko niyo wifashisha winjira muro konte yawe    <b> Amategeko n amabwiriza birakurikizwa </b>   <br>   .<br><input type="checkbox" id="accept-checkbox"> I accept the terms',
+      html: 'Amategeko n amabwiriza <br><br>  1. Kuba Umu agent (ambasador) wa Tubimenye Smart Solution bisaba ko uba ufite SIM card ikwanditseho ishobora kwakira SMS igihe ari ngombwa. <br> <br>  2. Usabwa kwiyandikisha ukoresheje  Nimero yawe ya telefone  ukanze ahavuga <b> Iyandikishe Hano ! Create account Here ! </b> <br><br> 3. Mukwiyandikisha wishyura amafaranga 250 Frw ukoresheje SIM card yawe  ukayishyura kuri MOMO pay ya Tubimenye Smart Solution Ltd nyuma yo kwishyura uhita uhabwa PIN uzajya wifashisha winjira kuri konte yawe  4. Kongera komisiyo wandika muri sisiteme nimero y umuntu wahaye App yacu akagura sisiteme igahita ikubarira amafaranga 500 frw kugeza kuri 200 Frw bitewe nigihe  umushyiriyemo   <br> <br>  5. Gusaba komisiyo bikorwa  binyumze muri sisiteme gusa kdi komisiyo uyihabwa uwo musi ( mumisi y akazi ) na nyuma y imisi 2 muri weekend. 6.Usabwa kubika neza PIN yawe kuko niyo wifashisha winjira muro konte yawe    <b> Amategeko n amabwiriza birakurikizwa </b>   <br>   .<br><input type="checkbox" id="accept-checkbox"> I accept the terms',
       
       icon: 'info',
       showCancelButton: true,
@@ -488,7 +488,7 @@ const summed = lastThreeNumber + (currentDay + currentMonth) * 77;
       preConfirm: () => {
         const acceptCheckbox = document.getElementById("accept-checkbox");
         if (!acceptCheckbox.checked) {
-          Swal.showValidationMessage('Please accept the terms to proceed');
+          Swal.showValidationMessage('Nyamuna mubanze mwemere amabwiriza mbere yo Gukomeza Please accept the terms to proceed');
         }
       }
     }).then((result) => {
