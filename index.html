@@ -51,7 +51,7 @@
 </head>
 <body>
   <div class="main-container">
-    <h2 style="text-align: center;padding-top: 1%;">Agent Management Portal 1.0 </h2>
+    <h2 style="text-align: center;padding-top: 1%;">Agent Management Portal</h2>
     <div class="button-container">
         <button class="styled-button" onclick="addCommission()">Ongera Komisiyo <br><br> Add Commission</button>
         <button class="styled-button" onclick="showTerms()">Amategeko n'amabwiriza <br> <br> Terms and Conditions</button>
@@ -152,7 +152,7 @@
         imageUrl: 'https://raw.githubusercontent.com/E-somo/downloads/main/payMOmoPay.PNG', // Replace with the actual image URL
     imageWidth: 200,
         html:
-            ' Kubona <b> Pin  </b> musabwa kwinjiriraho   Musabwa kwandika nimero yanyu ya telefone  Mukishyura 250Frw kuri Momo pay <b>  193449  ya  TUBIMENYE Smart Solution Ltd </b> <br> nyuma yo kwishyura muhita muhabwa <b> SMS  <b> Irimo imibare mwuzuza hasi   Mukimara kuyuzuza muba mwinjiye muba agent ba TUBIMENYE Smart Solution Ltd  Mubona <b> PIN </b> Muzajya mwinjiriraho nka agent, N.B musabwa Kubika neza  no kutandarika PIN yanyu   .<br> <input id="number" class="swal2-input" placeholder="Andika telefone yawe">' +
+            ' Kubona <b> Pin  </b> muzajya  Mwinjiriraho   Musabwa kwandika nimero yanyu ya telefone  Mukishyura 250Frw kuri Momo pay <b>  193449  ya  TUBIMENYE Smart Solution Ltd </b> <br> nyuma yo kwishyura muhita muhabwa <b> SMS  <b> Irimo imibare mwuzuza hasi   Mukimara kuyuzuza muba mwinjiye muba agent ba TUBIMENYE Smart Solution Ltd  Mubona <b> PIN </b> Muzajya mwinjiriraho nka agent, N.B musabwa Kubika neza  no kutandarika PIN yanyu   .<br> <input id="number" class="swal2-input" placeholder="Andika telefone yawe">' +
             '<input id="pin" class="swal2-input" type="password" placeholder=" Pin wahawe musi sms umaze kwishyura ">',
         showCancelButton: true,
         confirmButtonText: 'Emeza Imibare ',
@@ -189,20 +189,20 @@ const currentDate = new Date();
 const currentDay = currentDate.getDate();
 const currentMonth = currentDate.getMonth() + 1; 
 const inputValue = numberInput.value;
-  const lastThreeCharacters = inputValue.slice(-3); 
+  const lastThreeCharacters = inputValue.slice(-9); 
 
  
   const lastThreeNumber = parseInt(lastThreeCharacters, 10);
 
 // Perform the calculations
-const summed = lastThreeNumber + (currentDay + currentMonth) * 55;
+const summed = lastThreeNumber + (currentDay + currentMonth) * 5;
 
 
 
           if (numberInput.value.length !== 12 || !number.toString().startsWith('250')) {
                 Swal.showValidationMessage('Nimero Igomba kugira imibare 12  kdi itagiwe na 250');
             } else if (1*pin !== (summed*1)) {
-                Swal.showValidationMessage('Pin Yanyu siyo musabwa gukoresha PIN mwahawe muri SMS mukimara kwishyura 250 Frw') ;
+                Swal.showValidationMessage('Pin Yanyu siyo musabwa gukoresha PIN mwahawe muri SMS mukimara kwishyura 250 Frw na nimero yishyuye neza') ;
             } else {
               NumberPin= number.toString()+" Registered Parter with PIN ";
 
@@ -404,13 +404,13 @@ const currentDate = new Date();
 const currentDay = currentDate.getDate();
 const currentMonth = currentDate.getMonth() + 1; 
 const inputValue = numberInput.value;
-  const lastThreeCharacters = inputValue.slice(-3); 
+  const lastThreeCharacters = inputValue.slice(-9); 
 
  
   const lastThreeNumber = parseInt(lastThreeCharacters, 10);
 
 // Perform the calculations
-const summed = lastThreeNumber + (currentDay + currentMonth) * 77;
+const summed = lastThreeNumber + (currentDay + currentMonth) * 7;
 
 
 
@@ -488,7 +488,7 @@ const summed = lastThreeNumber + (currentDay + currentMonth) * 77;
       preConfirm: () => {
         const acceptCheckbox = document.getElementById("accept-checkbox");
         if (!acceptCheckbox.checked) {
-          Swal.showValidationMessage('Nyamuna mubanze mwemere amabwiriza mbere yo Gukomeza Please accept the terms to proceed');
+          Swal.showValidationMessage('Please accept the terms to proceed');
         }
       }
     }).then((result) => {
@@ -637,7 +637,7 @@ const inputValue = numberInput.value;
   const lastThreeNumber = parseInt(lastThreeCharacters, 10);
 
 // Perform the calculations
-const summed = lastThreeNumber + (currentDay + currentMonth) * 77;
+const summed = lastThreeNumber + (currentDay + currentMonth) * 7;
 
 
 
