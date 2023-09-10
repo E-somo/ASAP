@@ -1,786 +1,1911 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        body {
+            background-color:#15b337;
+            /* display: flex; */
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .main-container{
+          height: 50vh;
+            background-color: #15b337;
+            width: 65%;
+            margin: 0px auto;
 
-  <p>Administrative help center TUBIMENYE Smart Solution Ltd</p> 
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        }
+        .button-container {
+            display: flex;
+            /* width: 55%; */
+            
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            padding: 20px;
+        }
+
+        .styled-button {
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            height: fit-content;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .styled-button:hover {
+            background-color: #2980b9;
+        }
+    </style>
 </head>
+<body>
+  <div class="main-container">
+    <h2 style="text-align: center;padding-top: 1%;">Agent Management Portal 1.0</h2>
+    <div class="button-container">
+        <button class="styled-button" onclick="addCommission()">Ongera Komisiyo <br><br> Add Commission</button>
+        <button class="styled-button" onclick="showTerms()">Amategeko n'amabwiriza <br> <br> Terms and Conditions</button>
+        <button class="styled-button" onclick="askCommission()">Reba / Saba Komisiyo <br> <br>view Ask Commission</button>
+            </div>
+  </div>
 
- <div id="fullhelp">
-  
-  <h1>Calculator</h1>
+
+    <script>
+    var netChechForCommision="dummy";
+    var coppier =""
+     var subitter =0;
+     var connecStatus = "huuuu";
+     var connecOk  = "huuuu";
+     var connecOkagent ="e3ess";
+     connecStatusagent ="ooora";
+     var trueIdmember ="trrr";
+     var activesum="";
+     var expectedString ="2121122"
+     var retrypolicy ="festo";
+     var PhoneTelsearched="wew112334";
+     var loggedNumber = "123454322";
+
+     var agentCheck = "sindiwe" ;
+     var netAmmount = "";
+     var askerNr="22222222"
+
+ 
+    let sum = 99;
+    var NumberPin="";
+
+    var  num1phone = "xytre"; // Example value
+     var   num2PIN="sytet"
     
-    <label for="inputABCD">Input ABCD: App Id </label>
-    <input type="text" id="inputABCD">
-    <br>
-    
-    <label for="inputFixed">Select Fixed Value (cost):</label>
-    <select id="inputFixed">
-        <option value="2800">Mat Web</option>
-        <option value="3000">Mat V3</option>
-        <option value="5500">Mat VIP3</option>
-    </select>
-    <br>
-    
-    <label for="inputMonth">Select Month:</label>
-    <select id="inputMonth">
-        <option value="01">January 01</option>
-        <option value="02">February02</option> 
-         <option value="03">March 03</option>
-        <option value="04">April 04</option>
-        <option value="05">May 05 </option>
-        <option value="06">June 06 </option>
-        <option value="07">July 07 </option>
-        <option value="08">August 08 </option>
-        <option value="09">September 09 </option>
-        <option value="10">October 10 </option>
-        <option value="11">November 11</option>
-        <option value="12">December12 </option>
-        <!-- ... Add other months here ... -->
-    </select>
-    
-    <label for="inputDay">Select Day:</label>
-    <select id="inputDay">
-        <script>
-            for (let day = 1; day <= 31; day++) {
-                document.write(`<option value="${day.toString().padStart(2, '0')}">${day}</option>`);
+    document.addEventListener('contextmenu', function (event) {
+            event.preventDefault();
+        });
+        
+        
+           document.addEventListener('keydown', function (event) {
+            if (event.ctrlKey && event.key === 'u') {
+                event.preventDefault();
             }
-        </script>
-    </select>
-    <br>
+        }); 
+
+        const intervalId = setInterval(checkDomain, 2000);
+        function getDomainName() {
+            var domain = window.location.hostname;
+            return domain;
+        }
+
+        // Function to check the domain and display the appropriate message
+        function checkDomain() {
+            var domainName = getDomainName();
+           if (!domainName.includes("somo")) {  
+
+           // if (!domainName.includes("127.0")) { 
+
+            coppier ="bilK3Xcc";
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Copyrighted Material',
+                    allowOutsideClick:false,
+                    text: 'Iyi service ni iya Tubimenye smart Solution Ltd. Please contact T S S Ltd for permission.'
+               
+                  });
+            } else {
+                // If the domain is correct, display the domain name in an alert
+                //alert('Domain Name: ' + domainName);
+                
+                coppier ="K3XOsVTbvii1Hr5K";
+            }
+        }
     
-    <label for="inputComment">Comment:</label>
-    <input type="text" id="inputComment">
-    <br>
-    
-    <button id="calculateButton2">Calculate</button>
-    <button id="displayResultsButton">Display Saved Results</button>
-    
-    <p id="result"></p>
-
-
-
-    <label for="input1x">Enter a number:</label>
-    <input type="number" id="input1x">
-
-    <!-- Result will be displayed here -->
-    <p id="result"></p>
-
-<input type="text" id="autorizein" placeholder="Enter Device admin">
-  <button id="Otorizer" onclick="Autorize()">Autorizer</button>
-  <input type="text" id="inputFilNbr" style="display: block;" placeholder="Enter Number to help">
-  <input type="text" id="verificationInput" placeholder="Enter verification code">
-  <button id="Atorize" style="display:none;" onclick="verifyInput()" >Verify</button>
- <button id="AtoMomo" style="color:blue;" onclick="ActivateMomo()" >Momo Pay OTP </button>
-  <select id="dropdown" style="display: none;">
-    <option value="">Select an option</option>
-      <option value="2800">MATEGEKO Yumuhanda WEB</option>
-    <option value="5500">MATEGEKO Yumuhanda VIP3</option>
-    <option value="3000">Mategeko y umuhanda V3</option>
-    <option value="1111">Biology</option>
-    <option value="2222">Chemistry</option>
-    <option value="3333">Mathematics</option>
-    <option value="4444">English</option>
-  </select>
-  
-   <input type="text" id="inputField2" style="display: none;" placeholder="Enter Dynamic Pin Admin">
-  <button id="checkButton" onclick="checkInput()" style="display: none;">Check Input</button>
-
-  <input type="text" id="inputField" style="display: none;" placeholder="Enter device Id">
-  <button id="calculateButton" onclick="calculateSum()" style="display: none;">Calculate Sum</button>
-
-  <label id="sumLabel" style="display: none; color:blue;"></label>
-  <label id="selectedOptionLabel" style="display: none;"></label>
- 
- <h1>IndexedDB Example</h1>
-
-    <input type="text" id="nameInput" placeholder="Enter Name">
-    <button onclick="storeData()">Store Data</button>
-    <button onclick="getData()">Get Data</button>
-    <button onclick="exportData()">Export Data</button>
-    
-    <br>
-    <input type="text" id="searchInput" placeholder="Search Name">
-    <button onclick="searchData()">Search</button>
-
-    <br>
-    <input type="text" id="updateIdInput" placeholder="Enter ID">
-    <input type="text" id="updateNameInput" placeholder="Enter New Name">
-    <button onclick="updateData()">Update</button>
-
-</div>
-  
-  <script>
-
-
-(function(_0xdabd31,_0x3efe40){const _0x5e9334=_0x3b51,_0x4d5178=_0xdabd31();while(!![]){try{const _0x636a9=parseInt(_0x5e9334(0x1e6))/0x1+-parseInt(_0x5e9334(0x1e9))/0x2*(-parseInt(_0x5e9334(0x1e2))/0x3)+parseInt(_0x5e9334(0x1ea))/0x4+parseInt(_0x5e9334(0x1df))/0x5*(-parseInt(_0x5e9334(0x1e3))/0x6)+-parseInt(_0x5e9334(0x1e4))/0x7*(parseInt(_0x5e9334(0x1e8))/0x8)+parseInt(_0x5e9334(0x1eb))/0x9*(-parseInt(_0x5e9334(0x1de))/0xa)+parseInt(_0x5e9334(0x1e5))/0xb*(parseInt(_0x5e9334(0x1e0))/0xc);if(_0x636a9===_0x3efe40)break;else _0x4d5178['push'](_0x4d5178['shift']());}catch(_0x5001ea){_0x4d5178['push'](_0x4d5178['shift']());}}}(_0xd9e9,0x1be4f));function _0xd9e9(){const _0x19fc36=['4540hASYRt','523755jchyGW','1668BhRiXz','This\x20content\x20is\x20copyrighted\x20material.\x20Access\x20to\x20this\x20domain\x20is\x20restricted.','672072MlxEGP','6YMMsPK','325304qarOpS','6974TubwoE','47059gEEWXW','includes','8qSlCZW','2vhXCks','340580txDAXs','3546GTJKOA','fire','location'];_0xd9e9=function(){return _0x19fc36;};return _0xd9e9();}function _0x3b51(_0x14ccd8,_0x1a6011){const _0xd9e927=_0xd9e9();return _0x3b51=function(_0x3b51f5,_0xa1fba2){_0x3b51f5=_0x3b51f5-0x1dd;let _0x3af50a=_0xd9e927[_0x3b51f5];return _0x3af50a;},_0x3b51(_0x14ccd8,_0x1a6011);}function checkDomain(){const _0x172924=_0x3b51,_0xe059ae=window[_0x172924(0x1dd)]['hostname'];!_0xe059ae[_0x172924(0x1e7)]('somo')&&Swal[_0x172924(0x1ec)]({'icon':'warning','title':'Copyright\x20Warning','text':_0x172924(0x1e1),'showConfirmButton':![],'timer':0x7d0});}setInterval(checkDomain,0x7d0);
-
-
-    
-    var finacode=0;
-    var TelNow =0;
-    var sumxb = 0;
-
-document.getElementById('fullhelp').style.display = 'none';
-    document.getElementById('displayResultsButton').style.display = 'none';
-
-
-showPop()
-   function showPop()
    
-   {
-      Swal.fire({
-        title: 'Welcome To T-smart Solution Ltd Helpcenter Portal ',
-        input: 'number',
-        inputLabel: 'Enter The admin password to continue ! ',
+    
+        function register() {
+            Swal.close(); // Close the login popup
+            // Add your registration logic here
+            console.log("Register function called");
+            //alert("Musabye wiyandikisha.");
+
+            Swal.fire({
+                title: 'Kwiyandikisha ',
+                text: 'Biroroshye. Gusa bisabako muba mwasomye amategeko n amabwiriza. kandi mukaba mufite  SIM card ishobora kwakira sms.  Ese Mwasomye amategeko n amabwiriza?',
+                icon: 'info',
+                allowOutsideClick:false,
+                showCancelButton: true,
+                confirmButtonText: 'Yego', // Text for the "Yego" button
+                cancelButtonText: 'Oya'   // Text for the "Oya" button
+            }).then((result) => {
+                // Handle the result after user clicks a button
+                if (result.isConfirmed) {
+                    // "Yego" button clicked
+                   
+                    Swal.fire({
+                      title: 'Kubona PIN ',
+        imageUrl: 'https://raw.githubusercontent.com/E-somo/downloads/main/payMOmoPay.PNG', // Replace with the actual image URL
+    imageWidth: 200,
+        html:
+            ' Kubona <b> Pin  </b> muzajya  Mwinjiriraho   Musabwa kwandika nimero yanyu ya telefone  Mukishyura 250Frw kuri Momo pay <b>  193449  ya  TUBIMENYE Smart Solution Ltd </b> <br> nyuma yo kwishyura muhita muhabwa <b> SMS  <b> Irimo imibare mwuzuza hasi   Mukimara kuyuzuza muba mwinjiye muba agent ba TUBIMENYE Smart Solution Ltd  Mubona <b> PIN </b> Muzajya mwinjiriraho nka agent, N.B musabwa Kubika neza  no kutandarika PIN yanyu   .<br> <input id="number" class="swal2-input" placeholder="Andika telefone yawe">' +
+            '<input id="pin" class="swal2-input" type="password" placeholder=" Pin wahawe musi sms umaze kwishyura ">',
         showCancelButton: true,
-        confirmButtonText: 'Check',
-        preConfirm: (value) => {
-          if (value*1 === new Date().getFullYear() * 2) {
-            return true;
-          } else {
-            Swal.showValidationMessage('This is a copyrighted material by T-smart Solution Ltd');
-          }
-        }
-      }).then((result) => {
-        if (result.isConfirmed) {
-         
-          document.getElementById('fullhelp').style.display = 'block';
-         
-        }
-      });
-    }
+        confirmButtonText: 'Emeza Imibare ',
+        cancelButtonText: 'Nta SMS na bonye',
+        showCloseButton: true,
+        allowOutsideClick:false,
+        showCheckbox: true,
+        inputAttributes: {
+            autocapitalize: 'off'
+        },
+        inputValidator: (value) => {
+            if (!value) {
+                return 'Please fill in both fields';
+            }
+        },
+        preConfirm: () => {
+            const numberInput = document.getElementById('number');
+            const pinInput = document.getElementById('pin');
+            var  number = parseInt(numberInput.value);
+            const pin = parseInt(pinInput.value);
+           
 
 
+const TelNow = numberInput.value; // Your phone number
 
+let sum = 0;
 
+for (let i = 0; i < TelNow.length; i++) {
+  const characterValue = parseInt(TelNow[i]);
+  sum += characterValue;
+} 
 
+const currentDate = new Date();
+const currentDay = currentDate.getDate();
+const currentMonth = currentDate.getMonth() + 1; 
+const inputValue = numberInput.value;
+  const lastThreeCharacters = inputValue.slice(-9); 
 
-  document.getElementById("calculateButton2").style.display = "none";
  
+  const lastThreeNumber = parseInt(lastThreeCharacters, 10);
+
+// Perform the calculations
+const summed = lastThreeNumber + (currentDay + currentMonth) * 5;
+
+
+
+          if (numberInput.value.length !== 12 || !number.toString().startsWith('250')) {
+                Swal.showValidationMessage('Nimero Igomba kugira imibare 12  kdi itagiwe na 250');
+            } else if (1*pin !== (summed*1)) {
+                Swal.showValidationMessage('Pin Yanyu siyo musabwa gukoresha PIN mwahawe muri SMS mukimara kwishyura 250 Frw na nimero yishyuye neza') ;
+            } else {
+              
+
+              num1phone = number.toString();
+              num2PIN= ""+(sum*123);
+
+              NumberPin= number.toString()+" Registered Parter with PIN "+num2PIN;
+
+              //  alert("good add commissioner with  "+(sum*123)+" i will"+NumberPin );
+                
+                submitForm();
+                
+
+            }
+
+            return [
+                number,
+                pin,
+                document.querySelector('.swal2-checkbox').checked
+            ];
+        },
+        footer: '<p> Amategeko n amabwiriza Birakurikizwa <br>  © TUBIMENYE SMART SOLUTION Ltd </P>'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            const [number, pin, remember] = result.value;
+            console.log('Number:', number);
+            console.log('Pin:', pin);
+            console.log('Remember Me:', remember);
+            // You can perform further actions here, like sending data to a server.
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+           
+
+            // You can add code to handle the "Forgot Password" action.
+
+          
+        
   
-   const _0x25b238=_0x2634;(function(_0xb29723,_0x2c28b0){const _0x46f5d1=_0x2634,_0x15ebe6=_0xb29723();while(!![]){try{const _0x2b1eb4=parseInt(_0x46f5d1(0x148))/0x1+-parseInt(_0x46f5d1(0x14f))/0x2*(parseInt(_0x46f5d1(0x142))/0x3)+parseInt(_0x46f5d1(0x14c))/0x4+parseInt(_0x46f5d1(0x13c))/0x5+-parseInt(_0x46f5d1(0x14a))/0x6+-parseInt(_0x46f5d1(0x144))/0x7*(-parseInt(_0x46f5d1(0x152))/0x8)+parseInt(_0x46f5d1(0x156))/0x9*(-parseInt(_0x46f5d1(0x147))/0xa);if(_0x2b1eb4===_0x2c28b0)break;else _0x15ebe6['push'](_0x15ebe6['shift']());}catch(_0x27c652){_0x15ebe6['push'](_0x15ebe6['shift']());}}}(_0x4d0f,0xbc108));var navigator_info=window[_0x25b238(0x13f)],screen_info=window[_0x25b238(0x14d)],uid=navigator_info[_0x25b238(0x14b)]['length'];function _0x2634(_0x1c3009,_0xb1b2e6){const _0x4d0f2e=_0x4d0f();return _0x2634=function(_0x263469,_0x247ba9){_0x263469=_0x263469-0x13c;let _0x425fac=_0x4d0f2e[_0x263469];return _0x425fac;},_0x2634(_0x1c3009,_0xb1b2e6);}uid+=navigator_info['userAgent'][_0x25b238(0x14e)](/\D+/g,''),uid+=navigator_info[_0x25b238(0x159)][_0x25b238(0x141)],uid+=screen_info['height']||'',uid+=screen_info[_0x25b238(0x151)]||'',uid+=screen_info[_0x25b238(0x13d)]||'';let agent=navigator['userAgent'],final1=agent['replace'](_0x25b238(0x146),''),final2=final1[_0x25b238(0x14e)](_0x25b238(0x140),''),final3=final2[_0x25b238(0x14e)](_0x25b238(0x143),''),final4=final3[_0x25b238(0x14e)](_0x25b238(0x158),''),final5=final4[_0x25b238(0x14e)](_0x25b238(0x154),''),a=final5,encode='';for(let r=0x0;r<a[_0x25b238(0x141)];r++)encode+=a[_0x25b238(0x150)](r,r+0x1)[_0x25b238(0x13e)](0x0);let conver=encode+uid;result1=conver[_0x25b238(0x150)](-0x9b,-0x96),result2=conver['slice'](-0x96,-0x91);var result3=conver[_0x25b238(0x150)](-0x91,-0x8c),result4=conver[_0x25b238(0x150)](-0x8c,-0x87),result5=conver[_0x25b238(0x150)](-0x87,-0x82),result6=conver[_0x25b238(0x150)](-0x82,-0x7d),result7=conver[_0x25b238(0x150)](-0x7d,-0x78),result8=conver[_0x25b238(0x150)](-0x78,-0x73),result9=conver[_0x25b238(0x150)](-0x73,-0x6e),result10=conver[_0x25b238(0x150)](-0x6e,-0x69),result11=conver[_0x25b238(0x150)](-0x69,-0x64),result12=conver[_0x25b238(0x150)](-0x64,-0x5f),result13=conver['slice'](-0x5f,-0x5a),result14=conver[_0x25b238(0x150)](-0x5a,-0x55),result15=conver[_0x25b238(0x150)](-0x55,-0x50),result16=conver[_0x25b238(0x150)](-0x50,-0x4b),result17=conver[_0x25b238(0x150)](-0x4b,-0x46),result18=conver['slice'](-0x46,-0x41),result19=conver[_0x25b238(0x150)](-0x41,-0x3c),result20=conver[_0x25b238(0x150)](-0x3c,-0x37),result21=conver['slice'](-0x37,-0x32),result22=conver['slice'](-0x32,-0x2d),result23=conver[_0x25b238(0x150)](-0x2d,-0x28),result24=conver['slice'](-0x28,-0x23),result25=conver['slice'](-0x23,-0x1e),result26=conver['slice'](-0x1e,-0x19),result27=conver[_0x25b238(0x150)](-0x19,-0x14),result28=conver['slice'](-0x14,-0xf),result29=conver[_0x25b238(0x150)](-0xf,-0xa),result30=conver[_0x25b238(0x150)](-0xa,-0x5),result31=conver['slice'](-0x5,-0x1),result1=conver[_0x25b238(0x150)](-0x9b,-0x96),result2=conver[_0x25b238(0x150)](-0x96,-0x91);result3=conver[_0x25b238(0x150)](-0x91,-0x8c),result4=conver['slice'](-0x8c,-0x87),result5=conver[_0x25b238(0x150)](-0x87,-0x82),result6=conver[_0x25b238(0x150)](-0x82,-0x7d),result7=conver[_0x25b238(0x150)](-0x7d,-0x78),result8=conver[_0x25b238(0x150)](-0x78,-0x73),result9=conver[_0x25b238(0x150)](-0x73,-0x6e),result10=conver[_0x25b238(0x150)](-0x6e,-0x69),result11=conver[_0x25b238(0x150)](-0x69,-0x64),result12=conver[_0x25b238(0x150)](-0x64,-0x5f),result13=conver[_0x25b238(0x150)](-0x5f,-0x5a),result14=conver[_0x25b238(0x150)](-0x5a,-0x55),result15=conver[_0x25b238(0x150)](-0x55,-0x50),result16=conver['slice'](-0x50,-0x4b),result17=conver[_0x25b238(0x150)](-0x4b,-0x46),result18=conver['slice'](-0x46,-0x41),result19=conver[_0x25b238(0x150)](-0x41,-0x3c),result20=conver[_0x25b238(0x150)](-0x3c,-0x37),result21=conver[_0x25b238(0x150)](-0x37,-0x32),result22=conver[_0x25b238(0x150)](-0x32,-0x2d),result23=conver['slice'](-0x2d,-0x28),result24=conver['slice'](-0x28,-0x23),result25=conver[_0x25b238(0x150)](-0x23,-0x1e),result26=conver[_0x25b238(0x150)](-0x1e,-0x19),result27=conver['slice'](-0x19,-0x14),result28=conver[_0x25b238(0x150)](-0x14,-0xf),result29=conver[_0x25b238(0x150)](-0xf,-0xa),result30=conver[_0x25b238(0x150)](-0xa,-0x5),result31=conver[_0x25b238(0x150)](-0x5,-0x1),''==result1&&(result1=_0x25b238(0x145)),''==result2&&(result2=_0x25b238(0x145)),''==result3&&(result3=_0x25b238(0x145)),''==result4&&(result4=_0x25b238(0x145)),''==result5&&(result5=_0x25b238(0x145)),''==result6&&(result6=_0x25b238(0x145)),''==result7&&(result7='1111'),''==result8&&(result8=_0x25b238(0x145)),''==result9&&(result9='1111'),''==result10&&(result10=_0x25b238(0x145)),''==result11&&(result11='1111'),''==result12&&(result12=_0x25b238(0x145)),''==result13&&(result13=_0x25b238(0x145)),''==result14&&(result14=_0x25b238(0x145)),''==result15&&(result15=_0x25b238(0x145)),''==result16&&(result16=_0x25b238(0x145)),''==result17&&(result17=_0x25b238(0x145)),''==result18&&(result18=_0x25b238(0x145)),''==result19&&(result19=_0x25b238(0x145)),''==result20&&(result20=_0x25b238(0x145)),''==result21&&(result21='1111'),''==result22&&(result22='1111'),''==result23&&(result23=_0x25b238(0x145)),''==result24&&(result24=_0x25b238(0x145)),''==result25&&(result25='1111'),''==result26&&(result26=_0x25b238(0x145)),''==result27&&(result27=_0x25b238(0x145)),''==result28&&(result28=_0x25b238(0x145)),''==result29&&(result29=_0x25b238(0x145)),''==result30&&(result30='1111'),''==result31&&(result31=_0x25b238(0x145));var resultTot=parseInt(result1)+parseInt(result2)+parseInt(result3)+parseInt(result4)+parseInt(result5)+parseInt(result6)+parseInt(result7)+parseInt(result8)+parseInt(result9)+parseInt(result10)+parseInt(result11)+parseInt(result12)+parseInt(result13)+parseInt(result14)+parseInt(result15)+parseInt(result16)+parseInt(result17)+parseInt(result18)+parseInt(result19)+parseInt(result20)+parseInt(result21)+parseInt(result22)+parseInt(result23)+parseInt(result24)+parseInt(result25)+parseInt(result26)+parseInt(result27)+parseInt(result28)+parseInt(result29)+parseInt(result30)+parseInt(result31);_0x25b238(0x149)!=typeof Storage?(localStorage[_0x25b238(0x157)](_0x25b238(0x153),resultTot),atvoid()):alert(_0x25b238(0x155));function _0x4d0f(){const _0x5d69de=['Chrome','28LpwTDE','1111','Mozilla','412070zPHNZh','730897YiQYUE','undefined','1372272fLixjv','mimeTypes','1705340UDWNDC','screen','replace','490ITXkvl','slice','width','267544GZzbGr','lastDeviceID','AppleWebKit','You\x20brouser\x20can\x20not\x20accept\x20our\x20\x20System\x20please\x20change\x20your\x20brurse\x20and\x20enjoy\x20our\x20service\x20Thanks\x20','306VisEyI','setItem','Safari','plugins','6397890KtaEhu','pixelDepth','charCodeAt','navigator','KHTML,\x20like\x20Gecko','length','2088wYYTHo'];_0x4d0f=function(){return _0x5d69de;};return _0x4d0f();}
-   
-   
-  if (localStorage.getItem("otorized")===("otorize")){
-     
+          }
+    });
+
+                
+                
+                  } 
+            });
        
-       var checkButton = document.getElementById("Atorize");
-        checkButton.style.display = "block";
-        
-        var checkButtonAdmin = document.getElementById("Otorizer");
-        checkButtonAdmin.style.display = "none";
-        var InputAdmin = document.getElementById("autorizein");
-              InputAdmin.style.display = "none";
-   }else {
-   
-  
-   alert(localStorage.getItem("lastDeviceID"));
-   }
-   
-   
-
-function atvoid(){}
-  var finsum ="";
-  
-  document.getElementById("selectedOptionLabel").innerHTML = localStorage.getItem("sumVAll2");
-  
-  
-    function getCurrentDateTime() {
-      var now = new Date();
-      var year = now.getFullYear();
-      var month = ('0' + (now.getMonth() + 1)).slice(-2);
-      var day = ('0' + now.getDate()).slice(-2);
-      var hours = ('0' + now.getHours()).slice(-2);
-      var minutes = ('0' + now.getMinutes()).slice(-2);
-      var seconds = ('0' + now.getSeconds()).slice(-2);
-
-      return year + '-' + month + '-' + day + ' ' + hours + ':' + minutes + ':' + seconds;
-    }
-
-    function verifyInput() {
-      var verificationInput = document.getElementById("verificationInput");
-      var inputCode = verificationInput.value;
-
-      var currentDateTime = getCurrentDateTime();
-      var sum = parseInt(currentDateTime.slice(0, 4)) + parseInt(currentDateTime.slice(5, 7)) + parseInt(currentDateTime.slice(8, 10));
-     
-    
-   if(parseInt(currentDateTime.slice(11, 13))>12) {
-     
-    finsum =sum*22;
-   }else {
-    finsum =sum*33;
-    }
-      if (inputCode === finsum.toString()) {
-        document.getElementById("dropdown").style.display = "block";
-        document.getElementById("inputField").style.display = "block";
-        document.getElementById("calculateButton").style.display = "block";
-        document.getElementById("calculateButton2").style.display = "block";
-        document.getElementById("verificationInput").readOnly = true;
-          document.getElementById("selectedOptionLabel").style.display = "block";
-          document.getElementById('displayResultsButton').style.display = 'block';
-
-      } else {
-      handleButtonClick();
-        alert("Invalid verification code! please call 0788574136 or 0783239659");
-        document.getElementById("selectedOptionLabel").style.display = "none";
-      }
-    }
-
-    function calculateSum() {
-            verifyInput();
-      var dropdown = document.getElementById("dropdown");
-      var selectedOption = dropdown.options[dropdown.selectedIndex];
-       var valType = selectedOption.value;
-      var selectedOptionText = selectedOption.textContent;
-      var inputField = document.getElementById("inputField");
-      var inputValue = inputField.value;
-      var inputFilNbr =document.getElementById("inputFilNbr");
-      var inputFilNbrVal=inputFilNbr.value;
-      var inputFieldph = document.getElementById("inputFilNbr");
-    var inputValueph = inputFieldph.value;
-
-      if (inputValue.length >3 && !isNaN(inputValue)&& (selectedOptionText.indexOf("Select an option") === -1) && (inputValueph.length === 10)) {
-        var currentDateTime = getCurrentDateTime();
-        var sum = parseInt(inputValue);
-        var sumLabel = document.getElementById("sumLabel");
-        
-         let ABCD =inputValue;
-      let fixed =valType;
-      let now = new Date();
-      let y2y = now.getFullYear().toString().slice(-2);
-      let c2m = ((now.getMonth() + 1) * 2).toString().padStart(2, '0');
-      let c2d = (now.getDate() * 2).toString().padStart(2, '0');
-      let lmsum = (("0" + c2m).slice(-2)*1 + ("0" + c2d).slice(-2)*1).toString().padStart(2, '0');
-      let knownd = ABCD.slice(-2);
-      var summed = ABCD*1 + fixed*1+lmsum*1;
-      let Finalstring = knownd + summed + y2y + c2m + c2d + lmsum; 
-       let separatedString = Finalstring.replace(/(\d)(?=(\d{3})+$)/g, "$1-");
-        
-        sumLabel.textContent = currentDateTime + ' - PIN: 0' + separatedString +    '  phone Helped/yaguze: '+ inputFilNbrVal+' with Id: '+inputValue+"  "  + selectedOptionText+'';
        
-        var finAll = currentDateTime + ' - PIN: 0' + separatedString +    '  phone Helped/yaguze: '+ inputFilNbrVal+ ' with Id: '+inputValue+"  "  + selectedOptionText+'';
-       sumLabel.style.display = "block";
-        document.getElementById("selectedOptionLabel").innerHTML = localStorage.getItem("sumVAll2");
+          }
 
-        
-          localStorage.setItem("sumVAll2", " <br>"+finAll+ "<br>  "+  localStorage.getItem("sumVAll2") );
-        
-        document.getElementById("selectedOptionLabel").style.display = "block";
-        
-        
-        var inputField = document.getElementById("inputField");
-inputField.value = "";
+     function addCommission() {
+    Swal.fire({
+        title: 'Agent Login',
+        html:
+            ' Kongeramo <b> komission </b> musabwa kwinjira muri konte yanyu mukayongera andika hasi nimero(2507xxxxxxxx) <br> na Pin ya agent mwahawe. <br> <input id="number" class="swal2-input" placeholder="Andika telefone yawe">' +
+            '<input id="pin" class="swal2-input" type="password" placeholder="andika Pin yawe">',
+        showCancelButton: true,
+        confirmButtonText: 'Log in',
+        cancelButtonText: 'Forgot password',
+        showCloseButton: true,
+        allowOutsideClick:false,
+        showCheckbox: true,
+        inputAttributes: {
+            autocapitalize: 'off'
+        },
+        inputValidator: (value) => {
+            if (!value) {
+                return 'Please fill in both fields';
+            }
+        },
+        preConfirm: () => {
+            const numberInput = document.getElementById('number');
+            const pinInput = document.getElementById('pin');
+            var  number = parseInt(numberInput.value);
+            const pin = parseInt(pinInput.value);
+            trueIdmember =numberInput.value;
 
-var inputFilNbr = document.getElementById("inputFilNbr");
-inputFilNbr.value = "";
 
-var inputFieldph = document.getElementById("inputFilNbr");
-inputFieldph.value = "";
-        
-        
-        
-      } else {
-        alert("Invalid input! check all inputs"+inputValueph.length);
-      }
-    }
-    
-     var buttonPressCount = 0;
+const TelNow = numberInput.value; // Your phone number
 
-    function handleButtonClick() {
-      buttonPressCount++;
-      if (buttonPressCount === 7) {
-        var inputField = document.getElementById("inputField2");
-        var checkButton = document.getElementById("checkButton");
-        inputField.style.display = "block";
-        checkButton.style.display = "block";
-      }
-      if (buttonPressCount > 7) {
-        var currentMinute = new Date().getMinutes();
-        var inputField = document.getElementById("inputField2");
-        //inputField.value = currentMinute * 7;
-       // alert("Button pressed more than 7 times. Input field populated with " + (currentMinute * 7));
-      }
-    }
+let sum = 0;
 
-    function checkInput() {
-      var inputField = document.getElementById("inputField2");
-      var inputValue = inputField.value;
-      var currentMinute = new Date().getMinutes();
-      if (inputValue == currentMinute * 7) {
-      buttonPressCount = 0;
-      var inputField = document.getElementById("inputField2");
-        var checkButton = document.getElementById("checkButton");
-        inputField.style.display = "none";
-        checkButton.style.display = "none";
-       
-         alert("Verification code to Helpcenter"+finsum);
-        
-      } else {
-        alert("Input value does not match the current  time ");
-      }
-    }
-    function Autorize() {
-    var inputField = document.getElementById("autorizein");
-      var inputValue = inputField.value;
-   
-    if(localStorage.getItem("lastDeviceID")+"123"===inputValue) {
-    
-       localStorage.setItem("otorized","otorize");
-       alert("you are autorized to use this machine as helpcenter Request admin code");
-       
-       var checkButton = document.getElementById("Atorize");
-        checkButton.style.display = "block";
-        
-        var checkButtonAdmin = document.getElementById("Otorizer");
-        checkButtonAdmin.style.display = "none";
-        var InputAdmin = document.getElementById("autorizein");
-              InputAdmin.style.display = "none";
-    }
-    
-    }
-    
-    
-    function ActivateMomo() {
-    
-      var input1 = document.getElementById('inputFilNbr').value;
-  var sum1 = new Date().getDate() + new Date().getMonth() + 1; // Add 1 to get the current month
-
-  if (input1.length === 10) {
-    var result = (parseInt(input1) * 1 + sum1 - 700000000) * 4;
-    alert('The result is: ' + result);
-  } else {
-    alert('Please enter a 10-digit phone number number');
-  }
+for (let i = 0; i < TelNow.length; i++) {
+  const characterValue = parseInt(TelNow[i]);
+  sum += characterValue;
 }
 
 
 
- var request = indexedDB.open('myDatabase', 1);
-        var db;
 
-        request.onerror = function(event) {
-            console.log('Database error: ' + event.target.errorCode);
-        };
+            if (numberInput.value.length !== 12 || !number.toString().startsWith('250')) {
+                Swal.showValidationMessage('Nimero Igomba kugira imibare 12  kdi itagiwe na 250');
+            } else if (1*pin !== (sum*123)) {
+                Swal.showValidationMessage('Pin Yanyu siyo Niba mwayibagiwe mukande kuri Nibagiwe Pin , Niba mutariyandikishije muba agent/Ambasaderi  mukande hasi  kuri Iyandikishe biroroshye !' );
+            } else {
+               // alert("good add commission "); 
+               // findinFromAll();
+              // loggedNumber = numberInput.value;
+              loggedNumber= numberInput.value; 
 
-        request.onsuccess = function(event) {
-            db = event.target.result;
-            console.log('Database opened successfully');
-        };
-
-        request.onupgradeneeded = function(event) {
-            db = event.target.result;
-            var objectStore = db.createObjectStore('myData', { keyPath: 'id', autoIncrement: true });
-            objectStore.createIndex('name', 'name', { unique: false });
-            console.log('Database upgrade complete');
-        };
-
-        function storeData() {
-            var name = document.getElementById('nameInput').value;
-            var data = { name: name, age: 30 };
-
-            var transaction = db.transaction(['myData'], 'readwrite');
-            var objectStore = transaction.objectStore('myData');
-            var request = objectStore.put(data);
-
-            request.onerror = function(event) {
-                console.log('Error storing data: ' + event.target.error);
-            };
-
-            request.onsuccess = function(event) {
-                console.log('Data stored successfully');
-            };
-        }
-
-        function getData() {
-            var selectedKey = prompt('Enter the key (ID) of the data to retrieve:');
-            if (selectedKey !== null && selectedKey !== '') {
-                var key = Number(selectedKey);
-
-                var transaction = db.transaction(['myData'], 'readonly');
-                var objectStore = transaction.objectStore('myData');
-                var request = objectStore.get(key);
-
-                request.onerror = function(event) {
-                    console.log('Error retrieving data: ' + event.target.error);
-                };
-
-                request.onsuccess = function(event) {
-                    var data = event.target.result;
-                    if (data) {
-                        var message = 'Retrieved data:\nName: ' + data.name + ', Age: ' + data.age;
-                        alert(message);
-                    } else {
-                        alert('No data found with the provided key');
+               Swal.fire({
+                title: 'Shyiramo nimero',
+                input: 'number',
+                inputLabel: 'Andikaka hano hasi nimero ya telefone 07xxxxxxxx yaguze  kugirango  komission yawe yiyongere Hano wandika nimero yuwo  wahaye App akagura  niyo ataba yaraguze sisiteme ikurebera niba yaraguze koko igakongerera komisiyo',
+                inputAttributes: {
+                    pattern: '[0-9]{10}', // Require exactly 10 digits
+                    min: 0,             // Minimum value allowed
+                    step: 1             // Only integer values
+                },
+                showCancelButton: true,
+                confirmButtonText: 'Submit',
+                cancelButtonText: 'Cancel',
+                preConfirm: (inputValue) => {
+                  askerNr=inputValue;
+                    if (!inputValue.toString().startsWith('0') || inputValue.toString().length !== 10) {
+                        Swal.showValidationMessage('nimer igizwe n imbare 10 kdi itangirwa na zero 07xxxxxxx.');
+                    }  else if ("25"+inputValue === loggedNumber) {
+        Swal.showValidationMessage('Ntabwo byemwe kwiyakaho komisiyo  hakenewe nimero y\'uwo wahaye App ! ');
+    }
+                    {
+                        return inputValue;
                     }
-                };
+                }
+            }).then((result) => {
+                if (result.isConfirmed && result.value !== undefined) {
+                    
+                    PhoneTelsearched=result.value;
+                    findinFromAll();
+                    
+                }
+            });
+
+
             }
+
+            return [
+                number,
+                pin,
+                document.querySelector('.swal2-checkbox').checked
+            ];
+        },
+        footer: '<a href="#" onclick="register()"> Iyandikishe Hano ! Create account Here !</a>'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            const [number, pin, remember] = result.value;
+            console.log('Number:', number);
+            console.log('Pin:', pin);
+            console.log('Remember Me:', remember);
+            // You can perform further actions here, like sending data to a server.
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+           
+          Swal.fire({
+  title: 'Mwibagiwe PIN/PassWord ?',
+  html: 'Aha hakoresha nusanzwe ari Agent/ambassaderi akaba <b> yaribagiwe PIN </b> twamuhaye ngo ajye ayinjiriraho! , Mugihe rwose utari agent singombwa gukomeza hano ahubwo kanda hasi ahavuga Iyandikishe Hano ! Create account Here ! <br><br> Nose se Mubyukuri usanzwe uri agent ukaba wibagiwe PIN ? ',
+  icon: 'info',
+  showCancelButton: false,
+  showConfirmButton: true,
+  allowOutsideClick: false,
+  footer: '<a href="#" onclick="register()"> Iyandikishe Hano ! Create account Here !</a>'
+}).then((result) => {
+  if (result.isConfirmed) {
+    // Handle the confirm button click here
+      
+    Swal.fire({
+        title: 'Kubona PIN ',
+        imageUrl: 'https://raw.githubusercontent.com/E-somo/downloads/main/payMOmoPay.PNG', // Replace with the actual image URL
+    imageWidth: 200,
+        html:
+            'Kongera kubona  <b> PIN </b> musabwa kwishyura amafaranga mirongo itanu <b> 50Frw </b> kuri Momo pay <b>  193449  ya  TUBIMENYE Smart Solution Ltd </b> <br> nyuma yo kwishyura muhita muhabwa <b> SMS  </b> Irimo imibare mwuzuza hasi   Mukimara kuyuzuza  sisiteme yacu ihita ibashakira <p> PIN </b> Muzajya mwinjiriraho nka agent, N.B musabwa Kubika neza  no kutandarika PIN yanyu no kutongera kuyibagirwa   .<br> <input id="number" class="swal2-input" placeholder="Andika telefone yawe">' +
+            '<input id="pin" class="swal2-input" type="password" placeholder=" Pin wahawe musi sms umaze kwishyura ">',
+        showCancelButton: true,
+        confirmButtonText: 'Emeza Imibare ',
+        cancelButtonText: 'Nta SMS na bonye',
+        showCloseButton: true,
+        allowOutsideClick:false,
+        showCheckbox: true,
+        inputAttributes: {
+            autocapitalize: 'off'
+        },
+        inputValidator: (value) => {
+            if (!value) {
+                return 'Please fill in both fields';
+            }
+        },
+        preConfirm: () => {
+            const numberInput = document.getElementById('number');
+            const pinInput = document.getElementById('pin');
+            var  number = parseInt(numberInput.value);
+            const pin = parseInt(pinInput.value);
+           
+
+
+const TelNow = numberInput.value; // Your phone number
+
+let sum = 0;
+
+for (let i = 0; i < TelNow.length; i++) {
+  const characterValue = parseInt(TelNow[i]);
+  sum += characterValue;
+} 
+
+const currentDate = new Date();
+const currentDay = currentDate.getDate();
+const currentMonth = currentDate.getMonth() + 1; 
+const inputValue = numberInput.value;
+  const lastThreeCharacters = inputValue.slice(-9); 
+
+ 
+  const lastThreeNumber = parseInt(lastThreeCharacters, 10);
+
+// Perform the calculations
+const summed = lastThreeNumber + (currentDay + currentMonth) * 7;
+
+
+
+          if (numberInput.value.length !== 12 || !number.toString().startsWith('250')) {
+                Swal.showValidationMessage('Nimero Igomba kugira imibare 12  kdi itagiwe na 250');
+            } else if (1*pin !== (summed*1)) {
+                Swal.showValidationMessage('Pin Yanyu siyo muyandike neza kdi nti mugomba kurenza isaha imwe mutarayikoresha  !' );
+            } else {
+             // NumberPin= number.toString()+" Registered Parter with PIN "+(sum*123);
+              num1phone = number.toString();
+            //  num2PIN= ""+(sum*123);
+
+              //  alert("good add commissioner with  "+(sum*123)+" i will"+NumberPin );
+                
+              //  submitForm();
+
+              showLoadAgent();
+                
+            }
+        return [
+            number,
+            pin,
+            document.querySelector('.swal2-checkbox').checked
+        ];
+    },
+    footer: '<p> Amategeko n amabwiriza Birakurikizwa <br> © TUBIMENYE SMART SOLUTION Ltd </P>'
+}).then((result) => {
+    if (result.isConfirmed) {
+        // User clicked "Emeza Imibare" (Confirm) button
+        const [number, pin, checkboxChecked] = result.value;
+        // Handle the confirm action here
+        showLoadAgent();
+    } else if (result.dismiss === Swal.DismissReason.cancel) {
+        // User clicked "Nta SMS na bonye" (Cancel) button
+        Swal.fire({
+            title: 'Nta sms wabonye !',
+            text: 'Mugihe mubona koko  mwishyuye koko kuri  T-smart Solution Ltd  akaba nta sms Iturutse kuri TUBIMENYE Smart solution Ltd iguha PIN ugomba kuzuza ahabigenewe, Iminota ikaba ishyize irenga 10 nta sms muduhamagare kuri nimero y ubufasha tubafashe Murakoze  ',
+            icon: 'info'
+        });
+
+        // Handle the cancel action here
+    }
+});
+
+
+  }
+  
+  
+  
+});
+
+       
+       
+          }
+    });
+
+
         }
 
-        function exportData() {
-            var transaction = db.transaction(['myData'], 'readonly');
-            var objectStore = transaction.objectStore('myData');
-            var request = objectStore.getAll();
 
-            request.onerror = function(event) {
-                console.log('Error retrieving data: ' + event.target.error);
-            };
 
-            request.onsuccess = function(event) {
-                var data = event.target.result;
-                if (data.length > 0) {
-                    var workbook = XLSX.utils.book_new();
-                    var worksheet = XLSX.utils.json_to_sheet(data);
-                    XLSX.utils.book_append_sheet(workbook, worksheet, 'Data');
-                    XLSX.writeFile(workbook, 'data.xlsx');
-                    console.log('Data exported successfully');
-                } else {
-                    console.log('No data found in the database');
+        function showTerms() {
+          
+          Swal.fire({
+      title: 'Terms and Conditions',
+      
+      html: 'Amategeko n amabwiriza <br><br>  1. Kuba Umu agent (ambasador) wa Tubimenye Smart Solution bisaba ko uba ufite SIM card ikwanditseho ishobora kwakira SMS igihe ari ngombwa. <br> <br>  2. Usabwa kwiyandikisha ukoresheje  Nimero yawe ya telefone  ukanze ahavuga <b> Iyandikishe Hano ! Create account Here ! </b> <br><br> 3. Mukwiyandikisha wishyura amafaranga 250 Frw ukoresheje SIM card yawe  ukayishyura kuri MOMO pay ya Tubimenye Smart Solution Ltd nyuma yo kwishyura uhita uhabwa PIN uzajya wifashisha winjira kuri konte yawe  4. Kongera komisiyo wandika muri sisiteme nimero y umuntu wahaye App yacu akagura sisiteme igahita ikubarira amafaranga 500 frw kugeza kuri 200 Frw bitewe nigihe  umushyiriyemo   <br> <br>  5. Gusaba komisiyo bikorwa  binyumze muri sisiteme gusa kdi komisiyo uyihabwa uwo musi ( mumisi y akazi ) na nyuma y imisi 2 muri weekend. 6.Usabwa kubika neza PIN yawe kuko niyo wifashisha winjira muro konte yawe    <b> Amategeko n amabwiriza birakurikizwa </b>   <br>   .<br><input type="checkbox" id="accept-checkbox"> I accept the terms',
+      
+      icon: 'info',
+      showCancelButton: true,
+      confirmButtonText: 'Confirm',
+      allowOutsideClick:false,
+      cancelButtonText: 'Cancel',
+      footer: 'Copyrighted material powered by T-Smart Solution Ltd',
+      preConfirm: () => {
+        const acceptCheckbox = document.getElementById("accept-checkbox");
+        if (!acceptCheckbox.checked) {
+          Swal.showValidationMessage('Nyamuna Mwemere Amategeko n amabwiriza kugirango mukomeze Please accept the terms to proceed');
+        }
+      }
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          title: 'Accepted!',
+          imageUrl: 'https://raw.githubusercontent.com/E-somo/downloads/main/handshake.gif', 
+          imageWidth: 200,
+          text: 'You have accepted the terms and conditions.'
+         
+        });
+      } else if (result.dismiss === Swal.DismissReason.cancel) {
+        Swal.fire({
+          title: 'Cancelled',
+          text: 'You have cancelled the operation.',
+          icon: 'error',
+          footer: 'Copyrighted material powered by T-Smart Solution Ltd'
+        });
+      }
+    });
+
+        }
+
+        function askCommission() {
+           
+  
+          Swal.fire({
+        title: 'Gusaba Komisiyo',
+        html:
+            'Gusaba<b>  Komisiyo ugejejemo  </b> musabwa kwinjira muri konte yanyu  andika hasi nimero(2507xxxxxxxx) <br> na Pin ya agent mwahawe. <br> <input id="number" class="swal2-input" placeholder="Andika telefone yawe">' +
+            '<input id="pin" class="swal2-input" type="password" placeholder="andika Pin yawe">',
+        showCancelButton: true,
+        confirmButtonText: 'Reba Balance ',
+        cancelButtonText: 'Wibagiwe Pin ?',
+        showCloseButton: true,
+        allowOutsideClick:false,
+        showCheckbox: true,
+        inputAttributes: {
+            autocapitalize: 'off'
+        },
+        inputValidator: (value) => {
+            if (!value) {
+                return 'Please fill in both fields';
+            }
+        },
+        preConfirm: () => {
+            const numberInput = document.getElementById('number');
+            const pinInput = document.getElementById('pin');
+            var  number = parseInt(numberInput.value);
+            const pin = parseInt(pinInput.value);
+           
+            trueIdmember =numberInput.value;
+
+
+const TelNow = numberInput.value; // Your phone number
+
+let sum = 0;
+
+for (let i = 0; i < TelNow.length; i++) {
+  const characterValue = parseInt(TelNow[i]);
+  sum += characterValue;
+}
+
+
+
+
+            if (numberInput.value.length !== 12 || !number.toString().startsWith('250')) {
+                Swal.showValidationMessage('Nimero Igomba kugira imibare 12  kdi itagiwe na 250');
+            } else if (1*pin !== (sum*123)) {
+                Swal.showValidationMessage('Pin Yanyu siyo Niba mwayibagiwe mukande kuri Nibagiwe Pin/ Forgot PIN , Niba mutariyandikishije muba agent/Ambasaderi  mukande hasi  kuri Iyandikishe biroroshye !' );
+            } else {
+             //    showBalance();
+             TimedAlertForComission();
+            }
+
+            return [
+                number,
+                pin,
+                document.querySelector('.swal2-checkbox').checked
+            ];
+        },
+        footer: '<a href="#" onclick="register()"> Iyandikishe Hano ! Create account Here !</a>'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            const [number, pin, remember] = result.value;
+            console.log('Number:', number);
+            console.log('Pin:', pin);
+            console.log('Remember Me:', remember);
+            // You can perform further actions here, like sending data to a server.
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+           
+          Swal.fire({
+  title: 'Mwibagiwe PIN/PassWord ?',
+  html: 'Aha hakoresha nusanzwe ari Agent/ambassaderi akaba <b> yaribagiwe PIN </b> twamuhaye ngo ajye ayinjiriraho! , Mugihe rwose utari agent singombwa gukomeza hano ahubwo kanda hasi ahavuga Iyandikishe Hano ! Create account Here ! <br><br> Nose se Mubyukuri usanzwe uri agent ukaba wibagiwe PIN ? ',
+  icon: 'info',
+  showCancelButton: false,
+  showConfirmButton: true,
+  allowOutsideClick: false,
+  footer: '<a href="#" onclick="register()"> Iyandikishe Hano ! Create account Here !</a>'
+}).then((result) => {
+  if (result.isConfirmed) {
+    // Handle the confirm button click here
+      
+    Swal.fire({
+      title: 'Kubona PIN ',
+        imageUrl: 'https://raw.githubusercontent.com/E-somo/downloads/main/payMOmoPay.PNG', // Replace with the actual image URL
+    imageWidth: 200,
+     html:
+            'Kongera kubona  <b> PIN </b> musabwa kwishyura amafaranga mirongo itanu <b> 50Frw </b> kuri Momo pay <b>  193449  ya  TUBIMENYE Smart Solution Ltd </b> <br> nyuma yo kwishyura muhita muhabwa <b> SMS  </b> Irimo imibare mwuzuza hasi   Mukimara kuyuzuza  sisiteme yacu ihita ibashakira <p> PIN </b> Muzajya mwinjiriraho nka agent, N.B musabwa Kubika neza  no kutandarika PIN yanyu no kutongera kuyibagirwa   .<br> <input id="number" class="swal2-input" placeholder="Andika telefone yawe">' +
+            '<input id="pin" class="swal2-input" type="password" placeholder=" Pin wahawe musi sms umaze kwishyura ">',
+    showCancelButton: true,
+    confirmButtonText: 'Emeza Imibare',
+    cancelButtonText: 'Nta SMS na bonye',
+    showCloseButton: true,
+    allowOutsideClick: false,
+    showCheckbox: true,
+    inputAttributes: {
+        autocapitalize: 'off'
+    },
+    inputValidator: (value) => {
+        if (!value) {
+            return 'Please fill in both fields';
+        }
+    },
+    preConfirm: () => {
+        const numberInput = document.getElementById('number');
+        const pinInput = document.getElementById('pin');
+        var number = parseInt(numberInput.value);
+        const pin = parseInt(pinInput.value);
+      const TelNow = numberInput.value; // Your phone number
+
+let sum = 0;
+
+for (let i = 0; i < TelNow.length; i++) {
+  const characterValue = parseInt(TelNow[i]);
+  sum += characterValue;
+} 
+
+const currentDate = new Date();
+const currentDay = currentDate.getDate();
+const currentMonth = currentDate.getMonth() + 1; 
+const inputValue = numberInput.value;
+  const lastThreeCharacters = inputValue.slice(-9); 
+
+ 
+  const lastThreeNumber = parseInt(lastThreeCharacters, 10);
+
+// Perform the calculations
+const summed = lastThreeNumber + (currentDay + currentMonth) * 7;
+
+
+
+          if (numberInput.value.length !== 12 || !number.toString().startsWith('250')) {
+                Swal.showValidationMessage('Nimero Igomba kugira imibare 12  kdi itagiwe na 250');
+            } else if (1*pin !== (summed*1)) {
+                Swal.showValidationMessage('Pin Yanyu siyo musabwa kwandika neza nimero yishyuye 50frw  mukandukura neza pin mubonye muri sms mumaze kwishyura . Musabwa kutarenza isaha mutarayikoresha !');
+            } else {
+             // NumberPin= number.toString()+" Registered Parter with PIN "+(sum*123);
+              num1phone = number.toString();
+            //  num2PIN= ""+(sum*123);
+
+              //  alert("good add commissioner with  "+(sum*123)+" i will"+NumberPin );
+                
+              //  submitForm();
+
+              showLoadAgent();
+        // ... your existing preConfirm code ...
+            }
+        return [
+            number,
+            pin,
+            document.querySelector('.swal2-checkbox').checked
+        ];
+    },
+    footer: '<p> Amategeko n amabwiriza Birakurikizwa <br> © TUBIMENYE SMART SOLUTION Ltd </P>'
+}).then((result) => {
+    if (result.isConfirmed) {
+        // User clicked "Emeza Imibare" (Confirm) button
+        const [number, pin, checkboxChecked] = result.value;
+        // Handle the confirm action here
+        showLoadAgent();
+    } else if (result.dismiss === Swal.DismissReason.cancel) {
+        // User clicked "Nta SMS na bonye" (Cancel) button
+        Swal.fire({
+            title: 'Nta sms wabonye !',
+            text: 'Mugihe mubona koko  mwishyuye koko kuri  T-smart Solution Ltd  akaba nta sms Iturutse kuri TUBIMENYE Smart solution Ltd iguha PIN ugomba kuzuza ahabigenewe, Iminota ikaba ishyize irenga 10 nta sms muduhamagare kuri nimero y ubufasha tubafashe Murakoze  ',
+            icon: 'info'
+        });
+
+        // Handle the cancel action here
+    }
+});
+
+
+  }
+  
+  
+  
+});
+
+       
+       
+          }
+    });
+
+
+
+
+        }
+
+       
+        
+        function submitForm() {
+            // Get values from form fields
+
+            showLoadingAndAlert();
+             
+            var field1 = NumberPin; 
+           
+
+            
+
+           /// https://docs.google.com/forms/d/1SbilK3XOsVTbvii1Hr5K3a6J9UgJYdxXbKFQcZCwDEI/formResponse?
+
+            // AJAX request to submit data to the Google Form
+            $.ajax({
+               // url: "https://docs.google.com/forms/d/1S"+coppier+"bvii1Hr5K3a6J9UgJYdxXbKFQcZCwDEI/formResponse?",
+               url: "https://docs.google.com/forms/d/1Sbil"+coppier+"3a6J9UgJYdxXbKFQcZCwDEI/formResponse?",
+                
+                data: { "entry.906754000": field1 },
+                type: "POST",
+                dataType: "xml",
+                success: function (d) {
+                    // This function will be called when the AJAX request is successful (optional)
+                    // You can do something here if needed after the form is successfully submitted.
+                   // document.getElementById('success-msg').style.display = 'block';
+
+                  // alert("posted !!!")
+
+                  //findinIt();
+                  setTimeout(findinIt, 2500); // 
+
+
+                },
+                error: function (x, y, z) {
+                    // This function will be called if there's an error with the AJAX request
+                    // For example, if the form submission fails.
+                   // alert('Form submission failed. Please try again later.');
+                   setTimeout(findinIt, 2500); // 
+        
                 }
-            };
+            });
+      
+      
+          }
+          var founddsdsd = "RsgJ9jSH78YHdjuJGrn";
+
+          
+
+          
+        function findinIt() {
+     // document.getElementById('tabled').style.display = 'none';
+      const base = 'https://docs.google.com/spreadsheets/d/1FOMkCxky-A'+founddsdsd+'VbSQttY7PZ3nY0/gviz/tq?gid=13616113';
+
+   // const output = document.querySelector('.output');
+      const query = encodeURIComponent('Select B');
+      const url = base + '&tq=' + query;
+      fetch(url)
+        .then(res => res.text())
+        .then(rep => {
+          const data = JSON.parse(rep.substr(47).slice(0, -2));
+          const headingRow = document.createElement('tr');
+        //  output.append(headingRow);
+          data.table.cols.forEach((heading) => {
+            const cell = document.createElement('td');
+            cell.textContent = heading.label;
+            headingRow.append(cell);
+          });
+
+          data.table.rows.forEach((main) => {
+            const container = document.createElement('tr');
+         //   output.append(container);
+
+            main.c.forEach((ele) => {
+              const cell = document.createElement('td');
+              cell.textContent = ele.v;
+
+              let text = cell.textContent;
+              var lastSevenCharacters = text.substring(text.length - 7);
+
+              // Assuming num1 and num2 are defined somewhere
+               
+             
+
+              let result = text.includes(num1phone) && text.includes(num2PIN);
+
+              // Update connecStatus to "change" regardless of the condition result
+               connecStatus = "change";
+              
+
+              if (result) {
+                // Your code for the true condition goes here
+                // For example: container.style.backgroundColor = 'green';
+                //alert(" i am inside");
+               
+                   connecOk  = "wonder";
+              }
+            });
+          });
+        });
+    } 
+
+    var fdfdfin= "xky-ARsgJ"
+    function findAgent() { 
+     connecOkagent =  "Initial";
+     connecStatusagent="Initial";
+     // document.getElementById('tabled').style.display = 'none';
+      const base = 'https://docs.google.com/spreadsheets/d/1FOMkC'+fdfdfin+'9jSH78YHdjuJGrnVbSQttY7PZ3nY0/gviz/tq?gid=13616113';
+
+   // const output = document.querySelector('.output');
+      const query = encodeURIComponent('Select B');
+      const url = base + '&tq=' + query;
+      fetch(url)
+        .then(res => res.text())
+        .then(rep => {
+          const data = JSON.parse(rep.substr(47).slice(0, -2));
+          const headingRow = document.createElement('tr');
+        //  output.append(headingRow);
+          data.table.cols.forEach((heading) => {
+            const cell = document.createElement('td');
+            cell.textContent = heading.label;
+            headingRow.append(cell);
+          });
+
+          data.table.rows.forEach((main) => {
+            const container = document.createElement('tr');
+         //   output.append(container);
+
+            main.c.forEach((ele) => {
+              const cell = document.createElement('td');
+              cell.textContent = ele.v;
+
+              let text = cell.textContent;
+              var lastSevenCharacters = text.substring(text.length - 7);
+
+              // Assuming num1 and num2 are defined somewhere
+               
+             
+
+              let result = text.includes(num1phone) 
+
+              // Update connecStatus to "change" regardless of the condition result
+              
+               connecStatusagent = "change";
+              
+
+              if (result) {
+                // Your code for the true condition goes here
+                // For example: container.style.backgroundColor = 'green';
+                num2PIN=text.slice(-5)
+                //alert(" i am inside");
+               
+                   connecOkagent  = "wonder";
+              }
+            });
+          });
+        });
+    }
+
+
+
+
+
+    var resIn = 0;
+
+  function showLoadingAndAlert() {
+    findKomission();
+    Swal.fire({
+      title: 'Loading...',
+      html: 'Mutegereze gato cyane......',
+      timer: 5000,
+      timerProgressBar: true,
+      allowOutsideClick:false,
+      
+      showConfirmButton: false,
+      willOpen: () => {
+        Swal.showLoading();
+      },
+      onClose: () => {
+        // This callback might not always trigger as expected, so we'll use a separate setTimeout
+      }
+    });
+
+    // After 5 seconds, show the success alert
+   
+    setTimeout(() => {
+     
+    if((connecStatus === "change")&& (connecOk === "wonder"))
+      
+   
+      {
+      
+        var finalPin="PIN muzajya mukoresha Ni:"+num2PIN;
+         var messaged="Nshuti dukunda karibu muri ba ambassaderi/agent  ba company  nimero yanyu ni: "+num1phone+" Muzajya mwinjira burigihe ariyo mukoresheje kandi PIN nayo muzajya mukoresha ni "+num2PIN+" Musabwa kuyibika neza  no kutayandarika tubifurije ibihe byiza !!   "
+  
+        Swal.fire({
+  title: finalPin,
+  text: messaged,
+  imageUrl: 'https://raw.githubusercontent.com/E-somo/downloads/main/handshake.gif', // Replace with the actual path to your GIF
+  imageAlt: 'Cylindrical GIF',
+  imageWidth: 200,
+  allowOutsideClick:false, // Set the desired width of the image
+  onClose: () => {
+    // You can perform additional actions after the alert is closed 
+    window.close();
+  }
+});
+
+
+    
+    }else if ((connecStatusagent === "change")&& (connecOkagent == "Initial")) {
+    
+  Swal.fire({
+  icon: 'warning',
+  title: 'Ntabwo Nimero yanyu ibonetse muba agent',
+  text: 'Ntabwo Nimero yanyu ibonetse muba agent dufite ! niba koko mwariyandikishije muba agent mukoresheje iriya nimero Muhamage muhabwe ubufasha   ',
+  allowOutsideClick:false, // Change this message as needed
+}).then((result) => {
+  if (result.isConfirmed) {
+    // This block of code will be executed when the user clicks the "Confirm" button
+    // You can perform further actions here if needed
+  
+  }
+}); 
+
+    } else {
+
+      Swal.fire({
+  icon: 'warning',
+  title: 'Interinete ntabwo ikunze',
+  text: 'Mukoreshe interinete ikora neza Tubafashe Murakoze   ',
+  allowOutsideClick:false, // Change this message as needed
+}).then((result) => {
+  if (result.isConfirmed) {
+    // This block of code will be executed when the user clicks the "Confirm" button
+    // You can perform further actions here if needed
+  
+  }
+}); 
+
+
+    }
+      
+      
+    }, 5000); // Same time as the loading timer
+  }
+
+
+
+  function showLoadAgent() { 
+    findKomission();
+    findAgent();
+    Swal.fire({
+      title: 'Loading...',
+      html: 'Mutegereze gato cyane......',
+      timer: 5000,
+      timerProgressBar: true,
+      allowOutsideClick:false,
+      
+      showConfirmButton: false,
+      willOpen: () => {
+        Swal.showLoading();
+      },
+      onClose: () => {
+        // This callback might not always trigger as expected, so we'll use a separate setTimeout
+      }
+    });
+
+    // After 5 seconds, show the success alert
+   
+    setTimeout(() => {
+     
+    if((connecStatusagent === "change")&& (connecOkagent == "wonder"))
+      
+   
+      {
+      
+        var finalPin="PIN muzajya mukoresha Ni:"+num2PIN;
+        var messaged="Nshuti dukunda twongeye kubaha karibu muri ba ambassaderi/agent  ba company  nimero yanyu ni: "+num1phone+" Muzajya mwinjira burigihe ariyo mukoresheje kandi PIN nayo muzajya mukoresha ni "+num2PIN+" Musabwa kuyibika neza  no kutayandarika tubifurije ibihe byiza !!   "
+    
+       
+        Swal.fire({
+  title: finalPin,
+  text: messaged,
+  imageUrl: 'https://raw.githubusercontent.com/E-somo/downloads/main/handshake.gif', // Replace with the actual path to your GIF
+  imageAlt: 'Cylindrical GIF',
+  imageWidth: 200,
+  allowOutsideClick:false, // Set the desired width of the image
+  onClose: () => {
+    // You can perform additional actions after the alert is closed
+  }
+});
+
+
+    
+    }else {
+    
+  Swal.fire({
+  icon: 'warning',
+  title: 'Mwongere mugerageze',
+  text: 'Ntabwo bikunze ko  tubandika kubera interinete idakora neza mwongere mugerageze  ',
+  allowOutsideClick:false, // Change this message as needed
+}).then((result) => {
+  if (result.isConfirmed) {
+    // This block of code will be executed when the user clicks the "Confirm" button
+    // You can perform further actions here if needed
+  
+  }
+});
+
+    }
+      
+      
+    }, 5000); // Same time as the loading timer
+  }
+
+ 
+  
+ 
+
+
+
+   
+
+   // submitCommision();
+
+
+                        function submitCommision() {
+            // Get values from form fields
+
+            showLoadingCommision();
+             
+            //var field1 = "Testting" 
+          
+
+           var currentDate = new Date();
+
+// Extract year, month, and day
+var year = currentDate.getFullYear();
+var month = String(currentDate.getMonth() + 1).padStart(2, '0'); // Months are zero-indexed
+var day = String(currentDate.getDate()).padStart(2, '0');
+
+// Format the date as "YYYY-MM-DD"
+var formattedDate = year + '-' + month + '-' + day; 
+
+
+expectedString ="Id:"+trueIdmember+" date 2023-05-03 phone closingkey sum 0",
+
+      
+
+field2 =activesum;
+
+   field1=expectedString;
+ 	
+///Id:250783239659 on:2023-05-03 Tel:07883435 sum 100
+
+      
+           
+
+            // AJAX request to submit data to the Google Form
+            $.ajax({
+               // url: "https://docs.google.com/forms/d/1S"+coppier+"bvii1Hr5K3a6J9UgJYdxXbKFQcZCwDEI/formResponse?",
+               url: "https://docs.google.com/forms/d/1DusfgLLxVg-IkzUYvbb-io4dlAOv9KbS1gP2LoQgvP0/formResponse?",
+                
+                data: { "entry.1204219384": field1 , "entry.1167664038": field2 },
+                type: "POST",
+                dataType: "xml",
+                success: function (d) {
+                    // This function will be called when the AJAX request is successful (optional)
+                    // You can do something here if needed after the form is successfully submitted.
+                   // document.getElementById('success-msg').style.display = 'block';
+
+                  // alert("posted !!!")
+
+                  //findinIt();
+                  setTimeout(findinIt, 2500); // 
+
+
+                },
+                error: function (x, y, z) {
+                    // This function will be called if there's an error with the AJAX request
+                    // For example, if the form submission fails.
+                   // alert('Form submission failed. Please try again later.');
+                   setTimeout(findinIt, 2500); // 
+        
+                }
+            });
+        } 
+
+        
+
+     
+
+var  dataArray = [
+      "Id:12347 on:2023-05-07 Tel:07883432 sum 100"
+      
+      
+    ];
+
+    function showBalance(){
+      // Extract and sum the last three characters from valid entries
+     
+      const clientId = trueIdmember;
+     // const clientId ="12345"
+     
+     const closingKeyIndex = dataArray.lastIndexOf(`Id:${clientId} date 2023-05-03 phone closingkey sum 0`);
+      const filteredData = Array.from(new Set(dataArray.slice(closingKeyIndex + 1)))
+        .filter(entry => entry.includes(`Id:${clientId}`));
+
+      const sum = filteredData
+        .map(entry => {
+          const lastThreeDigits = entry.match(/\d{3}$/);
+          return lastThreeDigits ? parseInt(lastThreeDigits[0]) : 0;
+        })
+        .reduce((total, value) => total + value, 0);
+
+      // Display the result using SweetAlert2
+      if (filteredData.length > 0) {
+        const dataString = filteredData.join("   ");
+        Swal.fire({
+  title: `Amafaranga mushobora Gusaba Id:${clientId}`,
+  html: `${dataString}<br><br> Amafaranga yose mushobora Guhabwa ni: <b> ${sum}  Frw</b>`,
+  icon: "success",
+  allowOutsideClick: false,
+  showCancelButton: true,   // Show the cancel button
+  confirmButtonText: "Saba Komisiyo(Frw)",   // Text for the confirm button
+  cancelButtonText: "Cancel",             // Text for the cancel button
+}).then((result) => {
+  if (result.isConfirmed) {
+    // Code to execute when "Saba commission" button is clicked
+    // You can put your logic here
+    console.log("Saba commission clicked");
+    if (sum > 999){
+      alert("Komisiyo mwayibona")
+      
+      
+
+      Swal.fire({
+      title: "Confirm",
+      text: ` Amafaranga yose ya komisiyo uhabwa  ${clientId}: Wifuza Gusaba iyi kimisiyo none aha ?`,
+      icon: "question",
+      showCancelButton: true,
+      confirmButtonText: "Yego",
+      allowOutsideClick:false,
+      cancelButtonText: "Oya"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        activesum =sum;
+        submitCommision(); // Call your submitCommision() function here
+        setTimeout(findKomission, 3000); 
+      }
+    });
+  
+      
+    }else {
+      Swal.fire({
+          title: "Error",
+          text: "Mutwihanganire !  ,Amafaranga mushobora gusaba: "+ sum+" Frw Ari musi yashobora gusabwa , Gusaba komisiyo bitangirira ku mafaranga  1000. kuzamura mukomeze mwongere komisiyo. ",
+          allowOutsideClick:false,
+          icon: "error"
+         
+        });
+    }
+
+  } else if (result.dismiss === Swal.DismissReason.cancel) {
+    // Code to execute when "Cancel" button is clicked
+    // You can put your logic here
+    console.log("Cancel clicked");
+  }
+});
+
+
+
+
+      } else {
+
+        if (netChechForCommision==="success") {
+        Swal.fire({
+          title: `Nta Komisiyo Tubonye  kuri konte yanyu !!  ${clientId}`,
+          icon: "info",
+          allowOutsideClick:false
+        });
+      }else {
+        Swal.fire({
+          title: `Mukoreshe network ikora neza cg mwongere mukanya`,
+          icon: "error",
+          allowOutsideClick:false
+        });
+      }
+      }
+
+    }
+  var commm= "I1II6CGiU-9_"
+    function findKomission() {
+  const base = 'https://docs.google.com/spreadsheets/d/1KW5ZAtL'+commm+'4WXqNDpxqn0EMETpvQ-Rj0DU/gviz/tq?gid=0';
+  
+  const query = encodeURIComponent('SELECT B'); // Adjust the query to fetch the desired data columns
+  const url = base + '&tq=' + query;
+
+  fetch(url)
+    .then(res => res.text())
+    .then(rep => {
+      const data = JSON.parse(rep.substr(47).slice(0, -2));
+      const rows = data.table.rows;
+      const numberOfRows = rows.length;
+      
+      rows.forEach((row, rowIndex) => {
+        const columns = row.c;
+
+        columns.forEach((column, columnIndex) => {
+          const value = column.v;
+          // Push the cell value into the dataArray without formatting 
+          dataArray.push(value);
+          netChechForCommision="success"
+          ///alert(value);
+        });
+
+        // Simulate the closing balance entry
+        if (rowIndex === numberOfRows - 1) {
+          dataArray.push(`Id:${clientId} on:2023-05-03 Tel:closingkey sum 100`);
         }
         
-        function searchData() {
-            var searchTerm = document.getElementById('searchInput').value;
-            
-            var transaction = db.transaction(['myData'], 'readonly');
-            var objectStore = transaction.objectStore('myData');
-            var index = objectStore.index('name');
-            var request = index.getAll(IDBKeyRange.bound(searchTerm, searchTerm + '\uffff'));
-            
-            request.onerror = function(event) {
-                console.log('Error searching data: ' + event.target.error);
-            };
-            
-            request.onsuccess = function(event) {
-                var data = event.target.result;
-                if (data.length > 0) {
-                    var message = 'Search results:\n';
-                    for (var i = 0; i < data.length; i++) {
-                        message += 'Name: ' + data[i].name + ', Age: ' + data[i].age + '\n';
-                    }
-                    alert(message);
-                } else {
-                    alert('No matching data found');
-                }
-            };
+        if (rowIndex === numberOfRows - 1) {
+
+          
+          // This is the last row, you can perform additional actions if needed
+          console.log(dataArray); // Check the dataArray after all data is pushed
         }
+      });
+    })
+    .catch(error => {
+      console.error("Error fetching data:", error);
+    });
+}
+
+function showTimedAlert() {
+  // Show the loading spinner
+  findKomission();
+   
+   netChechForCommision="dymmy"
+   dataArray = [
+     "Id:12347 On:2023-05-07 Tel:07883432 sum 100"
+     
+   ];
+  Swal.fire({
+    title: 'Loading...',
+    allowOutsideClick: false,
+    onBeforeOpen: () => {
+      Swal.showLoading();
+    }
+  });
+
+  // Simulate a delay before closing the loading spinner and showing the alert
+  setTimeout(() => {
+    Swal.close(); // Close the loading spinner
+    // Show the alert
+   
+    Swal.fire({
+  icon: 'info',
+  title: 'Mutegereze gato  deluge',
+  text: 'Turimo kubashakira Balance kuri Konte yanyu Murakoze Kwihangana',
+  timerProgressBar: true,  // Show the progress bar
+  timer: 5000,  // Time in milliseconds (5 seconds)
+  showConfirmButton: false,
+  willClose: () => {
+    console.log('Alert has been closed.');
+    showBalance() /// renowed
+   /// showBalaForCommi()
+  },
+  onBeforeOpen: () => {
+    Swal.showLoading();  // Show loading spinner while the alert is open
+  }
+});
+
+
+  }, 500); // Simulated delay in milliseconds
+} 
+
+
+
+function TimedAlertForComission() {
+  // Show the loading spinner
+  
+  findKomission();
+    netChechForCommision="dymmy"
+    dataArray = [
+      "Id:12347 on:2023-05-07 Tel:07883432 sum 100"
+      
+    ];
+  
+  
+  
+  Swal.fire({
+    title: 'Loading...',
+    allowOutsideClick: false,
+    onBeforeOpen: () => {
+      Swal.showLoading();
+    }
+  });
+
+  // Simulate a delay before closing the loading spinner and showing the alert
+  setTimeout(() => {
+    Swal.close(); // Close the loading spinner
+    // Show the alert
+    
+    Swal.fire({
+  icon: 'info',
+  title: 'Mutegereze gato  ',
+  text: 'Turimo kubashakira Balance kuri Konte yanyu Murakoze Kwihangana',
+  timerProgressBar: true,  // Show the progress bar
+  timer: 5000,  // Time in milliseconds (5 seconds)
+  showConfirmButton: false,
+  willClose: () => {
+    console.log('Alert has been closed.');
+    showBalaForCommi();
+  },
+  onBeforeOpen: () => {
+    Swal.showLoading();  // Show loading spinner while the alert is open
+  }
+});
+
+
+  }, 500); // Simulated delay in milliseconds
+}  
+
+
+function showBalaForCommi(){
+      // Extract and sum the last three characters from valid entries
+     const clientId = trueIdmember;
+     // const clientId ="12345"
+     
+     const closingKeyIndex = dataArray.lastIndexOf(`Id:${clientId} date 2023-05-03 phone closingkey sum 0`);
+      const filteredData = Array.from(new Set(dataArray.slice(closingKeyIndex + 1)))
+        .filter(entry => entry.includes(`Id:${clientId}`));
+
+      const sum = filteredData
+        .map(entry => {
+          const lastThreeDigits = entry.match(/\d{3}$/);
+          return lastThreeDigits ? parseInt(lastThreeDigits[0]) : 0;
+        })
+        .reduce((total, value) => total + value, 0);
+
+      // Display the result using SweetAlert2
+      if (filteredData.length > 0) {
+        const dataString = filteredData.join("   ");
+        Swal.fire({
+  title: `Amafaranga mushobora Gusaba Id:${clientId}`,
+  html: `${dataString}<br><br> Amafaranga yose mushobora Guhabwa ni: <b> ${sum} </b>`,
+  icon: "success",
+  allowOutsideClick: false,
+  showCancelButton: true,   // Show the cancel button
+  confirmButtonText: "Saba Komisiyo(Frw)",   // Text for the confirm button
+  cancelButtonText: "Cancel",             // Text for the cancel button
+}).then((result) => {
+  if (result.isConfirmed) {
+    // Code to execute when "Saba commission" button is clicked
+    // You can put your logic here
+    console.log("Saba commission clicked");
+    if (sum > 999){
+      activesum =sum;
+      //alert("Komisiyo mwayibona") 
+      Swal.fire({
+      title: "Confirm",
+      text: ` Amafaranga yose ya komisiyo  iyi nimero   ${clientId}: yahabwa ni: ${sum} Frw Wifuza Gusaba iyi kimisiyo none aha ?`,
+      icon: "question",
+      showCancelButton: true,
+      confirmButtonText: "Yego",
+      cancelButtonText: "Oya"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        activesum =sum;
+        submitCommision(); // Call your submitCommision() function here
+        setTimeout(findKomission, 3000); 
+      }
+    });
+  
+      
+    }else {
+      Swal.fire({
+          title: "Error",
+          text: "Mutwihanganire !  ,Amafaranga mushobora gusaba: "+ sum+" Frw Ari musi yashobora gusabwa , Gusaba komisiyo bitangirira ku mafaranga  1000. kuzamura mukomeze mwongere komisiyo. ",
+          icon: "error"
+        });
+    }
+
+  } else if (result.dismiss === Swal.DismissReason.cancel) {
+    // Code to execute when "Cancel" button is clicked
+    // You can put your logic here
+    console.log("Cancel clicked");
+  }
+});
+
+
+
+
+      } else {
+
+        if (netChechForCommision==="success") {
+        Swal.fire({
+          title: `Nta Komision Tubonye  kuri konte yanyu !!  ${clientId}`,
+          icon: "info",
+          allowOutsideClick:false
+        });
+      }else {
+        Swal.fire({
+          title: `Mukoreshe network ikora neza cg mwongere mukanya`,
+          icon: "error",
+          allowOutsideClick:false
+        });
+      }
+      }
+    }
+
+
+
+    function showLoadingCommision() {
+    //findKomission();
+    Swal.fire({
+      title: 'Just Loading...',
+      html: 'Mutegereze gato cyane ......',
+      timer: 5000,
+      timerProgressBar: true,
+      allowOutsideClick:false,
+      
+      showConfirmButton: false,
+      willOpen: () => {
+        Swal.showLoading();
+      },
+      onClose: () => {
+        // This callback might not always trigger as expected, so we'll use a separate setTimeout
+      }
+    });
+
+    // After 5 seconds, show the success alert
+   
+    setTimeout(() => {
+     
+      var isStringPresent = dataArray.includes(expectedString);
+
+if (isStringPresent) {
+  Swal.fire({
+  icon: 'success',
+  title: 'Komisiyo yanyu yasabwe neza!',
+  text: 'Kandi yamaze kohererwa igihe dosiye imara  ( umusi 1 mu misi y\'akazi, imisi 2 muri weekend).',
+  confirmButtonText: 'OK'
+});
+
+} else { 
+  if(retrypolicy==="festo")  {
+   
+    Swal.fire({
+    icon: 'error',
+  title: 'HARI IBITAGENZE NEZA',
+  html: 'Hari ibitageneze neza mukande hasi kuri <b>Ongera Ugerageze </b> sisiteme ibafashe.  N.B musabwa interinet ikora neza',
+  allowOutsideClick:false,
+  confirmButtonText: 'Ongera Ugerageze'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      console.log('Retry button clicked');
+   // alert("agiais tiried")
+
+    ///Assuming submitCommision() and findKomission() are defined functions
+   /// submitCommision(); // Call your submitCommision() function here
+   showLoadingCommision();
+    setTimeout(findKomission, 3000); 
+    
+  retrypolicy ="secundo";
+    
+    } else if (result.dismiss === Swal.DismissReason.cancel) {
+      // The user clicked the cancel button or closed the alert
+      console.log("User canceled");
+    }
+  });
+
+  
+} 
+
+if(retrypolicy==="secundo")  {
+  Swal.fire({
+  icon: 'error',
+  title: 'BIKOMEJE Kwanga',
+  html: 'Mukoreshe interinete ikora neza maze mwongere musabe  Komisiyo ',
+  allowOutsideClick:false,
+  confirmButtonText: 'Mwongere Musabe'
+}).then((result) => {
+  if (result.isConfirmed) {
+    // Retry logic here
+    console.log('Retry button clicked');
+
+    
+  }
+});
+
+  
+}
+
+}
+      
+   
+      
+      
+    }, 5000); // Same time as the loading timer
+  }
+
+   var foAll="5EjCg9AAV";
+  async function findinFromAll() {
+     num1 = PhoneTelsearched;
+    // No need for num2 in this case
+
+    const base = 'https://docs.google.com/spreadsheets/d/1z_xnixrb'+foAll+'VHzIHDb0xJdDtV7tf2wrHljSAM/gviz/tq?gid=98166758';
+
+    const query = encodeURIComponent('Select B');
+    const url = base + '&tq=' + query;
+
+    // Show loading alert
+   const loadingAlert = Swal.fire({
+  title: 'Loading...',
+  timer: 45000,
+  timerProgressBar: true,
+  allowOutsideClick: false,
+  showConfirmButton: false, // Hide the OK button
+  onBeforeOpen: () => {
+    Swal.showLoading();
+  }
+});
+
+    try {
+      const response = await fetch(url);
+      const rep = await response.text();
+      const data = JSON.parse(rep.substr(47).slice(0, -2));
+
+      let elementFound = false;
+
+      data.table.rows.forEach((main) => {
+        main.c.forEach((ele) => {
+          const cell = document.createElement('td');
+          cell.textContent = ele.v;
+
+          let text = cell.textContent;
+          let result = text.includes(num1);
+
+          if (result) {
+            elementFound = true;
+          }
+        });
+      });
+
+      // Close the loading alert if an element is found
+      if (elementFound) {
+        Swal.close();
+       Swal.fire({
+    icon: 'success',
+    title: 'Ni umukiliya.',
+    text: 'Iyi nimero ' + num1 + ' ni iyumukiliya nibyiza !   hakurikiyeho kubabarira Komisiyo',
+     allowOutsideClick: false,
+  }).then((result) => {
+    // Handle the user clicking the "OK" button
+    if (result.isConfirmed) {
+      // Do something when the OK button is clicked
+     // alert("User clicked OK on success alert.");
+      findKomission();
+
+      ///checheBefor()
+      
+    
+      setTimeout(checheBefor, 3000); 
+    }
+  });
+      } else {
+        Swal.close();
+        Swal.fire({
+          icon: 'error',
+          title: 'Ntabwo Tuyibonye',
+          allowOutsideClick:false,
+          text: 'Iyi nimero ntabwo igaragaye  mubakiliya ! Gusa musabwa kongera kugerageza mumasaha 24 nyuma y uko umukiriya aguze niba koko yaguze ! Murakoze ',
+        });
+      }
+    } catch (error) {
+      Swal.close();
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        allowOutsideClick:false,
+        text: 'Havutse ikibazo ! murebe niba interinete yanyu ikora neza cg mwongere mukanya ',
+      });
+    }
+  }
+var handExpet="hhh" 
+
+
+
+function checheBefor() {
+  findinFrompaid();
+}
+  var dataRow="";
+  var ffer = "_4WXqNDpxqn0";
+
+  async function findinFrompaid() {
+  const PhoneTelsearchedz = PhoneTelsearched; // Replace with the phone number you're searching for
+  const base = 'https://docs.google.com/spreadsheets/d/1KW5ZAtLI1II6CGiU-9'+ffer+'EMETpvQ-Rj0DU/gviz/tq?gid=166235360';
+
+  const query = encodeURIComponent('Select B');
+  const url = base + '&tq=' + query;
+
+  // Show loading alert
+  const loadingAlert = Swal.fire({
+    title: 'Loading...',
+    timer: 45000,
+    timerProgressBar: true,
+    allowOutsideClick: false,
+    showConfirmButton: false,
+    onBeforeOpen: () => {
+      Swal.showLoading();
+    }
+  });
+
+  try {
+    const response = await fetch(url);
+    const rep = await response.text();
+    const data = JSON.parse(rep.substr(47).slice(0, -2));
+
+    let elementFound = false;
+
+    data.table.rows.forEach((main) => {
+      main.c.forEach((ele) => {
+        const cell = document.createElement('td');
+        cell.textContent = ele.v;
+
+        let text = cell.textContent;
+
+        // Check if the text contains the phone number
+        if (text.includes("Tel:"+PhoneTelsearchedz)) {
+          elementFound = true;
+          // Display the corresponding row using Swal
+          const extractedText = text.substring(11,30);
+          dataRow =extractedText;
+          Swal.fire({
+            title: PhoneTelsearchedz+" Yarakoreshejwe !!",
+            html: 'Iyi nimero yakoreshejwe mugusaba komisiyo  na nimero +2507xxxxx '+dataRow +' <br> <br> Ntabwo byashoboka ko ikoresha n aba agent babiri mugusaba komisiyo <br> Murakoze  ',
+            allowOutsideClick:false,
+            icon: 'success'
+          });
+        }
+
+   
+       
         
-        function updateData() {
-            var id = Number(document.getElementById('updateIdInput').value);
-            var name = document.getElementById('updateNameInput').value;
-            
-            var transaction = db.transaction(['myData'], 'readwrite');
-            var objectStore = transaction.objectStore('myData');
-            var request = objectStore.get(id);
-            
-            request.onerror = function(event) {
-                console.log('Error retrieving data: ' + event.target.error);
-            };
-            
-            request.onsuccess = function(event) {
-                var data = event.target.result;
-                if (data) {
-                    data.name = name;
-                    var updateRequest = objectStore.put(data);
-                    
-                    updateRequest.onerror = function(event) {
-                        console.log('Error updating data: ' + event.target.error);
-                    };
-                    
-                    updateRequest.onsuccess = function(event) {
-                        console.log('Data updated successfully');
-                    };
-                } else {
-                    alert('No data found with the provided ID');
+      });
+    });
+
+    // If no data was found, show a message
+    if (!elementFound) {
+     
+
+      findcost();
+      
+    }
+  } catch (error) {
+    console.error(error);
+    Swal.fire({
+      title: 'Error',
+      text: 'An error occurred while fetching data. no  internet !  ',
+      allowOutsideClick:false,
+      icon: 'error'
+    });
+  } finally {
+    // Close the loading alert
+    loadingAlert.close();
+  }
+}
+var cotes="AtLI1II6CGiU-9";
+
+async function findcost() {
+  const PhoneTelsearchedz = loggedNumber; // Replace with the phone number you're searching for
+  const base = 'https://docs.google.com/spreadsheets/d/1KW5Z'+cotes+ '_4WXqNDpxqn0EMETpvQ-Rj0DU/gviz/tq?gid=166235360';
+
+  const query = encodeURIComponent('Select B');
+  const url = base + '&tq=' + query;
+
+  // Show loading alert
+  const loadingAlert = Swal.fire({
+    title: 'Loading...',
+    timer: 45000,
+    timerProgressBar: true,
+    allowOutsideClick: false,
+    showConfirmButton: false,
+    onBeforeOpen: () => {
+      Swal.showLoading();
+    }
+  });
+
+  try {
+    const response = await fetch(url);
+    const rep = await response.text();
+    const data = JSON.parse(rep.substr(47).slice(0, -2));
+
+    let elementFound = false;
+
+    data.table.rows.forEach((main) => {
+      main.c.forEach((ele) => {
+        const cell = document.createElement('td');
+        cell.textContent = ele.v;
+
+        let text = cell.textContent;
+
+        // Check if the text contains the phone number
+        if (text.includes("Id:"+PhoneTelsearchedz)) {
+          elementFound = true;
+          // Display the corresponding row using Swal
+         
+      netAmmount = "100"
+    
+      
+    
+        }
+
+   
+       
+        
+      });
+    });
+    
+   
+    // If no data was found, show a message
+    if (!elementFound) {
+      netAmmount = "200";
+      
+    
+    }
+    submitffloat();
+  } catch (error) {
+    console.error(error);
+    Swal.fire({
+      title: 'Error',
+      text: 'An error occurred while fetching data. no  internet !  ',
+      allowOutsideClick:false,
+      icon: 'error'
+    });
+  } finally {
+    // Close the loading alert
+    loadingAlert.close();
+  }  
+}
+
+function submitffloat() {
+            // Get values from form fields
+
+            showLoadingFloat();
+             
+            //var field1 = "Testting" 
+          
+
+           var currentDate = new Date();
+
+// Extract year, month, and day
+var year = currentDate.getFullYear();
+var month = String(currentDate.getMonth() + 1).padStart(2, '0'); // Months are zero-indexed
+var day = String(currentDate.getDate()).padStart(2, '0');
+
+// Format the date as "YYYY-MM-DD"
+var formattedDate = year + '-' + month + '-' + day; 
+
+var likneddd= "io4dlAOv9KbS1";
+expectedString ="Id:"+loggedNumber+" on:"+formattedDate+ " Tel:"+askerNr+"  sum "+netAmmount,
+
+      
+
+field2 ="";
+
+   field1=expectedString;
+ 	
+///Id:250783239659 on:2023-05-03 Tel:07883435 sum 100
+
+      
+           
+
+            // AJAX request to submit data to the Google Form
+            $.ajax({
+               // url: "https://docs.google.com/forms/d/1S"+coppier+"bvii1Hr5K3a6J9UgJYdxXbKFQcZCwDEI/formResponse?",
+               url: "https://docs.google.com/forms/d/1DusfgLLxVg-IkzUYvbb-"+likneddd+"gP2LoQgvP0/formResponse?",
+                
+                data: { "entry.1204219384": field1 , "entry.1167664038": field2 },
+                type: "POST",
+                dataType: "xml",
+                success: function (d) {
+                    // This function will be called when the AJAX request is successful (optional)
+                    // You can do something here if needed after the form is successfully submitted.
+                   // document.getElementById('success-msg').style.display = 'block';
+
+                  // alert("posted !!!")
+
+                  //findinIt();
+                 // setTimeout(findinIt, 2500); //
+                 setTimeout(findKomission,2500);
+
+
+                },
+                error: function (x, y, z) {
+                    // This function will be called if there's an error with the AJAX request
+                    // For example, if the form submission fails.
+                   // alert('Form submission failed. Please try again later.');
+                   //setTimeout(findinIt, 2500); // 
+                   setTimeout(findKomission,2500);
+        
                 }
-            };
+            });
         } 
 
 
 
-        function calculateSumxx() {
-            const currentDate = new Date();
-            var day = parseInt(currentDate.getDate().toString(), 10); // Get the day and parse it as an integer
-            var month = parseInt((currentDate.getMonth() + 1).toString(), 10); // Get the month (zero-based) and parse it as an integer
-            var input1xy = parseInt(document.getElementById("input1x").value, 10) || 0; // Get the value from the input field and parse it as an integer (default to 0 if input is empty)
-            
-            var lastThreeCharacters = input1xy.toString();
-            input1x= lastThreeCharacters;
-            var sum1 = day + month;
 
-            const lastThreeNumber =input1x.slice(-9);
+        function showLoadingFloat() {
+    //findKomission();
+    Swal.fire({
+      title: 'Just Loading...',
+      html: 'Turimo kohereza komisiyo Mutegereze gato cyane ......',
+      timer: 5000,
+      timerProgressBar: true,
+      allowOutsideClick:false,
+      
+      showConfirmButton: false,
+      willOpen: () => {
+        Swal.showLoading();
+      },
+      onClose: () => {
+        // This callback might not always trigger as expected, so we'll use a separate setTimeout
+      }
+    });
 
-const lastThreeNumberx = parseInt(lastThreeNumber, 10);
-            var insum = (((lastThreeNumberx*1)+sum1)+700)*4;
-            var insuv3 = (((lastThreeNumberx*1) +sum1)+500)*4;
-            var inVip = (((lastThreeNumberx*1)+sum1)+444)*4;
+    // After 5 seconds, show the success alert
+   
+    setTimeout(() => {
+     
+      var isStringPresent = dataArray.includes(expectedString);
 
- 
-            
-const currentDay = currentDate.getDate();
-const currentMonth = currentDate.getMonth() + 1; 
-
-const inputValue = (input1x*1);
-
-// const lastThreeCharactersxy = inputValue.slice(-9); 
-
-
-
- 
-
-// Perform the calculations
-const summed = (lastThreeNumberx*1) + (currentDay + currentMonth) * 7;
-const summedAmbaReg = (lastThreeNumberx*1) + (currentDay + currentMonth) * 5;
-
- TelNow = input1x*1  // Your phone number
-  
-
- 
-
- const tel ="0"+TelNow;
-
-// Convert the string to an array of characters
-const telArray = tel.split("");
-
-// Get the last nine characters
-const lastNine = telArray.slice(-12);
-
-// Convert the characters to numbers and find their sum
-const sumzx = lastNine.reduce((acc, char) => acc + parseInt(char, 10), 0);
-const sumRelt=sumzx*123;
-
-
- 
-
-                  // error here to handle this moeirng 03 09 
-            // Display the result
-            document.getElementById("result").innerHTML = "Result: mategeko Web(2800) " + insum + "  <br> <br>  Mat V3(3000) "+ insuv3+ "<br> <br>  Mat VIP3(5000) "+inVip + " <br> <br>  Forgot Pin(agent 50Fw): "+summed+ " <br> <br>  Agent(250frw)"+summedAmbaReg+" <br> <br>  agentLogCode"+sumRelt;
-
-         // document.getElementById("result").innerText = "Result: mategeko Web(2800)"+ insum ;
-        }
-
-        // Call the calculateSum function when the input value changes
-        document.getElementById("input1x").addEventListener("input", calculateSumxx);
-
-        // Call the calculateSum function initially to show the result with the default value (0)
-        calculateSumxx();
-       // alert("i am ok ")
-
-
-       document.getElementById("calculateButton2").addEventListener("click", function() { 
-
-        var inputElement = document.getElementById("inputABCD");
-    var inputValue = inputElement.value.trim();  // Trim whitespace from the input
-
-    if (inputValue !== "") {
-        alert("Input is not empty: " + inputValue); 
-
-       
-        const selectedMonth = document.getElementById("inputMonth").value;
-  const selectedDay = document.getElementById("inputDay").value;
-  const selectedFixedValue = parseInt(document.getElementById("inputFixed").value);
-
-  const selectedDate = new Date();
-  selectedDate.setMonth(parseInt(selectedMonth) - 1); // Months are 0-indexed
-  selectedDate.setDate(parseInt(selectedDay));
-
-  const currentDate = new Date();
-
-  const timeDifference = selectedDate.getTime() - currentDate.getTime();
-  let dayDifference = Math.floor(timeDifference / (1000 * 3600 * 24));
-
-  // Adjust the difference based on selectedFixedValue
-  var typed ="";
-  if (selectedFixedValue === 2800) {
-    dayDifference += 60;
-    typed = "Mateg Web"
-  } else if (selectedFixedValue === 3000) {
-    dayDifference += 60;
-    typed = "Mateg  V3 "
-  } else if (selectedFixedValue === 5500) {
-    dayDifference += 180;
-    typed = "Mateg  VIP3 "
-  }
-  
-  
+if (isStringPresent) {
   Swal.fire({
-    title: "Activate this : "+inputValue +" on "+typed ,
-    text: `You give him  ${dayDifference} days.`,
-    icon: "info",
-    showCancelButton: true,
-    confirmButtonText: "Accept",
-    cancelButtonText: "Cancel",
+  icon: 'success',
+  title: 'Komisiyo yanyu Yoherejwe  neza!',
+  text: 'mushobora Gukanda kuri Reba/ saba komisiyo kugirango murebeko yiy0ngereye koko . Murakoze Muri abagariciro kuri twe',
+  confirmButtonText: 'OK',
+  allowOutsideClick:false,
+  footer: 'Copyrighted material powered by T-Smart Solution Ltd'
+});
+
+} else { 
+  if(retrypolicy==="festo")  {
+   
+    Swal.fire({
+    icon: 'error',
+  title: 'HARI IBITAGENZE NEZA',
+  html: 'Hari ibitageneze neza mukohereza komisiyo  mukande hasi kuri <b>Ongera Ugerageze </b> sisiteme ibafashe.  N.B musabwa interinet ikora neza',
+  allowOutsideClick:false,
+  confirmButtonText: 'Ongera Ugerageze'
   }).then((result) => {
     if (result.isConfirmed) {
-      // User accepted the calculation, you can do something here
-      
+      console.log('Retry button clicked');
+   // alert("agiais tiried")
 
-      var ABCD = document.getElementById("inputABCD").value;
-            var selectedOption = document.getElementById("inputFixed");
-            var fixed = parseFloat(selectedOption.value);
-            var selectedText = selectedOption.options[selectedOption.selectedIndex].text;
-           
-            var appType = "name";
-            
-            let now = new Date();
-let y2y = now.getFullYear().toString().slice(-2);
-
-let inputMonth = document.getElementById("inputMonth").value;
-let c2m = (inputMonth * 2).toString().padStart(2, '0');
-
-let inputDay = document.getElementById("inputDay").value;
-let c2d = (inputDay * 2).toString().padStart(2, '0');
-
-let lmsum = (parseInt(c2m) + parseInt(c2d)).toString().padStart(2, '0');
-            
-            let knownd = ABCD.slice(-2);
-            var summed = (ABCD * 1) + (fixed * 1) + (lmsum * 1);
-            
-            let Finalstring = "" + knownd + "" + summed + "" + y2y + "" + c2m + "" + c2d + "" + lmsum;
-            let separatedString = "0" + Finalstring.replace(/(\d)(?=(\d{3})+$)/g, "$1-");
-            
-            var resultElement = document.getElementById("result");
-            resultElement.textContent = "Result: " + separatedString + " (" + selectedText + ")";
-           
-            var comment =  document.getElementById("inputComment").value;
-            var ABCD = document.getElementById("inputABCD").value;
-
-             // Get the comment from the input field
-           
-            
-            // Create an object to store the current date, result, and comment
-            let currentDate = new Date();
-            let savedResult = {
-                date: currentDate.toLocaleString(),
-                result: separatedString,
-                comment: comment,
-                ABCD:ABCD,
-                selectedText: selectedText
-            };
-            
-            // Get existing saved results from local storage or initialize an empty array
-            let savedResults = JSON.parse(localStorage.getItem("savedResults")) || [];
-
-// Push the new result to the array
-savedResults.unshift(savedResult);  // Use 'unshift' to add the new result at the beginning
-
-// Save the modified array back to localStorage
-localStorage.setItem("savedResults", JSON.stringify(savedResults));
-            
-Swal.fire("Accepted!", "You accepted the calculation.", "success");   
-      
-            // Display a success message
-          
-
-
-    } else if (result.isDismissed === Swal.DismissReason.cancel) {
-      // User canceled the calculation
-      Swal.fire("Cancelled", "You cancelled the calculation.", "error");
+    ///Assuming submitCommision() and findKomission() are defined functions
+   /// submitCommision(); // Call your submitCommision() function here
+  // showLoadingCommision();
+  showLoadingFloat();
+    setTimeout(findKomission, 5000); 
+    
+  retrypolicy ="secundo";
+    
+    } else if (result.dismiss === Swal.DismissReason.cancel) {
+      // The user clicked the cancel button or closed the alert
+      console.log("User canceled");
     }
   });
 
-
-    } else {
-        alert("Input is empty");
-    }
-
-        {
-           
-       
-       
-       }   });
-       
-      /*
-
-        document.getElementById("calculateButton2").addEventListener("click", function() {
-            var ABCD = document.getElementById("inputABCD").value;
-            var selectedOption = document.getElementById("inputFixed");
-            var fixed = parseFloat(selectedOption.value);
-            var selectedText = selectedOption.options[selectedOption.selectedIndex].text;
-            var appType = "name";
-            
-            let now = new Date();
-            let y2y = now.getFullYear().toString().slice(-2);
-
-            let inputMonth = document.getElementById("inputMonth").value;
-            let c2m = (inputMonth * 2).toString().padStart(2, '0');
-
-            let inputDay = document.getElementById("inputDay").value;
-            let c2d = (inputDay * 2).toString().padStart(2, '0');
-
-            let lmsum = (parseInt(c2m) + parseInt(c2d)).toString().padStart(2, '0');
-            
-            let knownd = ABCD.slice(-2);
-            var summed = (ABCD * 1) + (fixed * 1) + (lmsum * 1);
-            
-            let Finalstring = "" + knownd + "" + summed + "" + y2y + "" + c2m + "" + c2d + "" + lmsum;
-            let separatedString = "0" + Finalstring.replace(/(\d)(?=(\d{3})+$)/g, "$1-");
-            
-            var resultElement = document.getElementById("result");
-            var comment = document.getElementById("inputComment").value;
-            resultElement.textContent = "Result: " + separatedString + " (" + selectedText + ") => "+comment ;
-            
-            // Get the comment from the input field
-           
-            
-            // Create an object to store the current date, result, and comment
-            let currentDate = new Date();
-            let savedResult = {
-                date: currentDate.toLocaleString(),
-                result: separatedString,
-                comment: comment,
-                selectedText: selectedText
-            };
-            
-            // Get existing saved results from local storage or initialize an empty array
-            let savedResults = JSON.parse(localStorage.getItem("savedResults")) || [];
-
-// Push the new result to the array
-savedResults.unshift(savedResult);  // Use 'unshift' to add the new result at the beginning
-
-// Save the modified array back to localStorage
-localStorage.setItem("savedResults", JSON.stringify(savedResults));
-            
-          
-            
-            // Display a success message
-            Swal.fire("Success", "Result saved successfully!", "success");
-        }); 
-
-        */
-        document.getElementById("displayResultsButton").addEventListener("click", function() {
-            // Get saved results from local storage
-            let savedResults = JSON.parse(localStorage.getItem("savedResults")) || [];
-
-            // Prepare the HTML content for the SweetAlert modal
-            let resultsHtml = "<ul>";
-            savedResults.forEach(result => {
-                resultsHtml += `<li>${result.date} - Result: ${result.result} - Comment: ${result.comment} - Type: ${result.selectedText} id: ${result.ABCD}</li>`;
-            });
-            resultsHtml += "</ul>";
-
-            // Display the results using SweetAlert
-            Swal.fire({
-                title: "Saved Results",
-                html: resultsHtml,
-                icon: "info"
-            });
-        });
-
-     
-
-        //let finacode = 0; // Initialize finacode before the loop
-        
-
-       // function makeKode(TelNow) 
-
-// Example usage:
-//const TelNow = "12345";
-//console.log("Result:", result); 
   
-    </script>
+} 
 
+if(retrypolicy==="secundo")  {
+  Swal.fire({
+  icon: 'error',
+  title: 'BIKOMEJE Kwanga',
+  html: 'Mukoreshe interinete ikora neza maze mwongere komisiyo  ',
+  allowOutsideClick:false,
+  confirmButtonText: 'Mwongere Musabe'
+}).then((result) => {
+  if (result.isConfirmed) {
+    // Retry logic here
+    console.log('Retry button clicked');
+
+    
+  }
+});
+
+  
+}
+
+}
+      
+   
+  
+      
+    }, 7000); // Same time as the loading timer
+  }
+
+         
+
+    </script>
 </body>
 </html>
